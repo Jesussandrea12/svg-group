@@ -1,0 +1,113 @@
+/* =============================== Top bar ====================================*/
+.logo {
+  width: 200px;
+  padding: 1em;
+  position: fixed;
+  z-index: 999;
+}
+
+/* ================================ Hero =====================================*/
+
+.hero-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+
+  &-title {
+    font-family: var(--barlow), sans-serif;
+    font-size: 90px;
+    text-align: center;
+  }
+
+  &-subtitle {
+    font-family: var(--lato), sans-serif;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  &-container video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+}
+
+.orbit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  color: white;
+  height: 100vh;
+}
+
+/* ============================== Culture ====================================*/
+
+.culture-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-container-title {
+    font-family: var(--barlow), sans-serif;
+    font-size: 45px;
+    text-align: left;
+    position: relative;
+    color: #fff;
+    z-index: 2;
+  }
+
+  &-container-subtitle {
+    font-family: var(--lato), sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: left;
+    position: relative;
+    color: #fff;
+    z-index: 2;
+  }
+
+  &-container-desc {
+    font-family: var(--lato), sans-serif;
+    font-size: 25px;
+    text-align: left;
+    position: relative;
+    color: #fff;
+    z-index: 2;
+  }
+
+  &-images {
+    position: relative;
+    z-index: 2;
+
+    & img {
+      margin: 0 auto;
+      display: flex;
+      align-self: center;
+    }
+  }
+
+  &-container video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+}
+
+.images-container {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  padding: 1em 5em 1em 15em;
+}
