@@ -15,7 +15,7 @@
     </button>
     <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas>
       <!-- Menu -->
-      <ul class="vertical menu">
+      <ul class="vertical menu menu-offcanvas">
         <li><a href="#">Foundation</a></li>
         <li><a href="#">Dot</a></li>
         <li><a href="#">ZURB</a></li>
@@ -54,31 +54,34 @@
           <div class="orbit-wrapper">
             <ul class="orbit-container">
               <li class="orbit-slide">
-                <div>
+                <div class="hero-box-1">
                   <h3 class="hero-wrapper-title">MARCAS Y DEPORTES</h3>
                   <p class="hero-wrapper-subtitle">ADVERTISING & SPORTS MKTING</p>
                 </div>
               </li>
               <li class="orbit-slide">
-                <div>
+                <div class="hero-box-2">
                   <h3 class="hero-wrapper-title">MEDIOS + EGAGEMENT</h3>
                   <p class="hero-wrapper-subtitle">ADVERTISING & SPORTS MKTING</p>
                 </div>
               </li>
               <li class="orbit-slide">
-                <div>
+                <div class="hero-box-3">
                   <h3 class="hero-wrapper-title">CONFIANZA Y PASIÓN</h3>
                   <p class="hero-wrapper-subtitle">ADVERTISING & SPORTS MKTING</p>
                 </div>
               </li>
               <li class="orbit-slide">
-                <div>
+                <div class="hero-box-4">
                   <h3 class="hero-wrapper-title">24 7 360º</h3>
                   <p class="hero-wrapper-subtitle">ADVERTISING & SPORTS MKTING</p>
                 </div>
               </li>
             </ul>
           </div>
+          <section id="section04" class="demo">
+            <a href="#section05"><span></span></a>
+          </section>
           <nav class="orbit-bullets">
             <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
             <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
@@ -275,17 +278,17 @@
     <script src="dist/js/app.js"></script>
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <script type="text/javascript">
-      window.sr=ScrollReveal({reset:true}),sr.reveal(".culture-wrapper-container-title",{delay:300,easing:"ease",duration:1000}),
-                               sr.reveal(".culture-wrapper-container-subtitle",{delay:400,easing:"ease",duration:1000}),
-                               sr.reveal(".culture-wrapper-container-desc",{delay:500,easing:"ease",duration:1000}),
-                               sr.reveal(".culture-wrapper-images .toyota",{delay:600,easing:"ease",duration:1000}),
-                               sr.reveal(".culture-wrapper-images .bridgestone",{delay:700,easing:"ease",duration:1000}),
-                               sr.reveal(".culture-wrapper-images .santander",{delay:800,easing:"ease",duration:1000}),
-                               sr.reveal(".culture-wrapper-images .sudamericana",{delay:900,easing:"ease",duration:1000}),
-                               sr.reveal(".culture-wrapper-images .total",{delay:1000,easing:"ease",duration:1000}),
-                               sr.reveal(".culture-wrapper-images .bumbet",{delay:1100,easing:"ease",duration:1000}),
-                               sr.reveal(".culture-wrapper-images .conmebol",{delay:1200,easing:"ease",duration:1000}),
-                               sr.reveal(".culture-wrapper-images .autocredito",{delay:1300,easing:"ease",duration:1000}),
+      window.sr=ScrollReveal({reset:true}),sr.reveal(".culture-wrapper-container-title",{delay:300,origin:'top',easing:"ease",duration:800}),
+                               sr.reveal(".culture-wrapper-container-subtitle",{delay:400,origin:'top',easing:"ease",duration:800}),
+                               sr.reveal(".culture-wrapper-container-desc",{delay:500,origin:'top',easing:"ease",duration:800}),
+                               sr.reveal(".culture-wrapper-images .toyota",{delay:600,easing:"ease",duration:4000}),
+                               sr.reveal(".culture-wrapper-images .bridgestone",{delay:900,easing:"ease",duration:4000}),
+                               sr.reveal(".culture-wrapper-images .santander",{delay:1200,easing:"ease",duration:4000}),
+                               sr.reveal(".culture-wrapper-images .sudamericana",{delay:1500,easing:"ease",duration:4000}),
+                               sr.reveal(".culture-wrapper-images .total",{delay:1800,easing:"ease",duration:4000}),
+                               sr.reveal(".culture-wrapper-images .bumbet",{delay:2100,easing:"ease",duration:4000}),
+                               sr.reveal(".culture-wrapper-images .conmebol",{delay:2300,easing:"ease",duration:4000}),
+                               sr.reveal(".culture-wrapper-images .autocredito",{delay:2600,easing:"ease",duration:4000}),
                                sr.reveal(".cases-wrapper-half h3",{delay:300,easing:"ease",duration:1000}),
                                sr.reveal(".about-us h2",{delay:300,easing:"ease",duration:1200}),
                                sr.reveal(".about-us h3",{delay:400,easing:"ease",duration:1200}),

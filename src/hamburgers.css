@@ -18,6 +18,7 @@
   background-color: transparent;
   border: 0;
   margin: 0;
+  color: white !important;
   overflow: visible; }
   .hamburger:hover {
     opacity: 0.7; }
@@ -26,6 +27,7 @@
   width: 40px;
   height: 24px;
   display: inline-block;
+  color: white !important;
   position: relative; }
 
 .hamburger-inner {
@@ -35,7 +37,7 @@
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 40px;
     height: 4px;
-    background-color: #000;
+    background-color: #fff;
     border-radius: 4px;
     position: absolute;
     transition-property: transform;

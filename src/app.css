@@ -1,5 +1,27 @@
 /* =============================== Top bar ====================================*/
 
+.off-canvas {
+  background-color: var(--pitufo);
+}
+
+.menu-offcanvas {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+
+  & li a {
+    color: white;
+    font-family: var(--lato);
+    font-size: 30px;
+  }
+}
+
+.position-right.is-transition-push {
+    box-shadow: none;
+}
+
+/* =============================== Top bar ====================================*/
+
 .logo {
   width: 210px;
   margin: 2em;
@@ -12,7 +34,7 @@
   position: fixed;
   z-index: 999;
   right: 0;
-  color: white;
+  color: white !important;
 }
 
 .icon-button {
@@ -64,8 +86,52 @@
 }
 
 .orbit-bullets {
-  color: blue;
+  position: absolute;
   bottom: 0;
+}
+
+#section04 a {
+  position: absolute;
+  bottom: 20vh;
+}
+
+#section04 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb04 2s infinite;
+  animation: sdb04 2s infinite;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb04 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+}
+@keyframes sdb04 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
 }
 
 /* ============================== Culture ====================================*/
@@ -173,14 +239,14 @@
 }
 
 .reveal {
-  background-color: #03b5d5;
+  background-color: var(--pitufo);
   border: none;
   border-radius: none !important;
 }
 
 .modal-text {
   padding: 1em;
-  background-color: #03b5d5;
+  background-color: var(--pitufo);
 
   &-title {
     color: white;
@@ -234,10 +300,22 @@
   height: 100vh;
   background: url('../images/back-capacidades.jpg');
   background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 
   & h2 {
+    display: flex;
+    align-self: flex-start;
     color: white;
+    font-family: var(--barlow), sans-serif;
+    font-size: 45px;
     text-align: left;
+    position: relative;
+    color: #fff;
+    z-index: 2;
   }
 
   & h3 {
@@ -306,7 +384,7 @@
 
 .contact-container {
   position: relative;
-  background: #008cfe;
+  background: var(--pitufo);
   overflow: hidden;
 }
 
