@@ -13,6 +13,36 @@
         <span class="hamburger-inner"></span>
       </span>
     </button>
+
+    <div id="offcanvas-full-screen" class="offcanvas-full-screen" data-off-canvas data-transition="overlap">
+      <div class="offcanvas-full-screen-inner">
+
+        <ul class="offcanvas-full-screen-menu">
+          <div class="grid-x">
+            <div class="cell small-4 close-btn">
+              <button class="offcanvas-full-screen-close" aria-label="Close menu" type="button" data-close>
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="cell small-8">
+              <div class="box-menu">
+                <img src="dist/images/menu-ejemplo.jpg" alt="">
+              </div>
+              <div class="box-menu">
+                <img src="dist/images/menu-ejemplo.jpg" alt="">
+              </div>
+              <div class="box-menu">
+                <img src="dist/images/menu-ejemplo.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="offcanvas-">
+
+          </div>
+        </ul>
+      </div>
+    </div>
+
     <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas>
       <!-- Menu -->
       <ul class="vertical menu menu-offcanvas">
@@ -25,23 +55,11 @@
       </ul>
     </div>
 
-    <button type="button" class="icon-button" data-toggle="offCanvasLeft">
+    <button type="button" class="icon-button" data-toggle="offcanvas-full-screen">
       <img src="dist/images/icon-home.png" alt="icon">
     </button>
-    <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
-      <!-- Menu -->
-      <ul class="vertical menu">
-        <li><a href="#">Hello</a></li>
-        <li><a href="#">Dot</a></li>
-        <li><a href="#">ZURB</a></li>
-        <li><a href="#">Com</a></li>
-        <li><a href="#">Slash</a></li>
-        <li><a href="#">Sites</a></li>
-      </ul>
-    </div>
 
     <div class="off-canvas-content" data-off-canvas-content>
-
     <!-- Top bar -->
     <div class="nav">
       <img class="logo" src="dist/images/logo.png" alt="logo">
@@ -146,7 +164,7 @@
           <div class="grid-x">
             <div class="cell small-12 medium-6 large-6">
               <img data-open="case1" src="dist/images/caso-ejemplo.jpg" alt="ejemplo">
-              <div class="reveal fadeInRight" id="case1" data-reveal>
+              <div class="reveal" id="case1" data-reveal>
                 <div class="grid-x">
                   <div class="cell small-12 medium-5 large-6 modal-text">
                     <img src="dist/images/logo-empresa-caso.png" alt="logo-empresa">
@@ -275,9 +293,9 @@
               B1642CKN San Isidro <br>
               Buenos Aires <br>
               Argentina</p>
-            <p class="text info">
-              <a href="#">contacto@sv-group.com.ar</a>
-              <a href="#">+54 11 4742 8858</a>
+            <p class="info">
+              <a href="tel:+541147428858">+54 11 4742 8858</a>
+              <a href="mailto:contacto@sv-group.com.ar">contacto@sv-group.com.ar</a>
             </p>
           </span>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3287.520505203094!2d-58.478681385150445!3d-34.515038480482595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5a12c181347%3A0xcc951cbda99d485e!2sAv.+del+Libertador%2C+Argentina!5e0!3m2!1ses!2sus!4v1523025095977" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
