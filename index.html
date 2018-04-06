@@ -91,28 +91,28 @@
         <div class="images-container">
           <div class="grid-x culture-wrapper-images">
             <div class="cell small-6 medium-4 large-3">
-              <img src="dist/images/toyota.png" alt="toyota">
+              <img class="toyota" src="dist/images/toyota.png" alt="toyota">
             </div>
             <div class="cell small-6 medium-4 large-3">
-              <img src="dist/images/bridgestone.png" alt="bridgestone">
+              <img class="bridgestone" src="dist/images/bridgestone.png" alt="bridgestone">
             </div>
             <div class="cell small-6 medium-4 large-3">
-              <img src="dist/images/santander.png" alt="santander">
+              <img class="santander" src="dist/images/santander.png" alt="santander">
             </div>
             <div class="cell small-6 medium-4 large-3">
-              <img src="dist/images/sudamericana.png" alt="sudamericana">
+              <img class="sudamericana" src="dist/images/sudamericana.png" alt="sudamericana">
             </div>
             <div class="cell small-6 medium-4 large-3">
-              <img src="dist/images/total.png" alt="total">
+              <img class="total" src="dist/images/total.png" alt="total">
             </div>
             <div class="cell small-6 medium-4 large-3">
-              <img src="dist/images/bumbet.png" alt="bumbet">
+              <img class="bumbet" src="dist/images/bumbet.png" alt="bumbet">
             </div>
             <div class="cell small-6 medium-4 large-3">
-              <img src="dist/images/conmebol.png" alt="conmebol">
+              <img class="conmebol" src="dist/images/conmebol.png" alt="conmebol">
             </div>
             <div class="cell small-6 medium-4 large-3">
-              <img src="dist/images/autocredito.png" alt="autocredito">
+              <img class="autocredito" src="dist/images/autocredito.png" alt="autocredito">
             </div>
           </div>
         </div>
@@ -242,6 +242,20 @@
     <script src="dist/js/vendor/foundation.min.js"></script>
     <script src="dist/js/app.js"></script>
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script type="text/javascript">
+      window.sr=ScrollReveal({reset:true}),sr.reveal(".culture-wrapper-container-title",{delay:300,easing:"ease",duration:1000}),
+                               sr.reveal(".culture-wrapper-container-subtitle",{delay:400,easing:"ease",duration:1000}),
+                               sr.reveal(".culture-wrapper-container-desc",{delay:500,easing:"ease",duration:1000}),
+                               sr.reveal(".culture-wrapper-images .toyota",{delay:600,easing:"ease",duration:1000}),
+                               sr.reveal(".culture-wrapper-images .bridgestone",{delay:700,easing:"ease",duration:1000}),
+                               sr.reveal(".culture-wrapper-images .santander",{delay:800,easing:"ease",duration:1000}),
+                               sr.reveal(".culture-wrapper-images .sudamericana",{delay:900,easing:"ease",duration:1000}),
+                               sr.reveal(".culture-wrapper-images .total",{delay:1000,easing:"ease",duration:1000}),
+                               sr.reveal(".culture-wrapper-images .bumbet",{delay:1100,easing:"ease",duration:1000}),
+                               sr.reveal(".culture-wrapper-images .conmebol",{delay:1200,easing:"ease",duration:1000}),
+                               sr.reveal(".culture-wrapper-images .autocredito",{delay:1300,easing:"ease",duration:1000})
+    </script>
+
 
     <!-- Css -->
     <link href="https://fonts.googleapis.com/css?family=Barlow|Lato" rel="stylesheet">

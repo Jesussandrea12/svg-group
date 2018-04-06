@@ -1640,7 +1640,7 @@ ol.list-upper-roman {
   height: 1px;
   padding: 0;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  clip: rgb(132, 161, 204);
   white-space: nowrap;
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);

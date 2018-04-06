@@ -1,10 +1,15 @@
 /* =============================== Top bar ====================================*/
+body {
+  background-attachment: fixed;
+}
+
 .logo {
   width: 200px;
   padding: 1em;
   position: fixed;
   z-index: 999;
 }
+
 .menu-icon {
   padding: 1em;
   margin: 1em;
