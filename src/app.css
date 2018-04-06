@@ -54,7 +54,7 @@
   height: 100vh;
 
   &-title {
-    font-family: var(--barlow), sans-serif;
+    font-family: var(--mont), sans-serif;
     font-size: 90px;
     text-align: center;
   }
@@ -145,7 +145,7 @@
   align-items: center;
 
   &-container-title {
-    font-family: var(--barlow), sans-serif;
+    font-family: var(--mont), sans-serif;
     font-size: 45px;
     text-align: left;
     position: relative;
@@ -154,7 +154,7 @@
   }
 
   &-container-subtitle {
-    font-family: var(--barlow), sans-serif;
+    font-family: var(--mont), sans-serif;
     font-weight: bold;
     font-size: 30px;
     text-align: left;
@@ -220,7 +220,7 @@
 
     & h3 {
       text-align: justify;
-      font-family: var(--barlow), sans-serif;
+      font-family: var(--mont), sans-serif;
       font-size: 45px;
       color: white;
       padding-left: 8em;
@@ -250,7 +250,7 @@
 
   &-title {
     color: white;
-    font-family: var(--barlow), sans-serif;
+    font-family: var(--mont), sans-serif;
   }
 
   &-desc {
@@ -277,13 +277,13 @@
   & h2 {
     color: white;
     text-align: left;
-    font-family: var(--barlow), sans-serif;
+    font-family: var(--mont), sans-serif;
     font-size: 45px;
   }
 
   & h3 {
     color: white;
-    font-family: var(--barlow), sans-serif;
+    font-family: var(--mont), sans-serif;
     font-size: 30px;
   }
 
@@ -310,7 +310,7 @@
     display: flex;
     align-self: flex-start;
     color: white;
-    font-family: var(--barlow), sans-serif;
+    font-family: var(--mont), sans-serif;
     font-size: 45px;
     text-align: left;
     position: relative;
@@ -357,14 +357,20 @@
 
 .planificacion {
   height: 100vh;
-  background: url('../images/back-nosotros.jpg');
+  background: url('../images/bg-planificacion.jpg');
   background-attachment: fixed;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 
+  &-text {
+    color: white;
+    font-family: var(--lato);
+  }
+
   .content {
-    background: rgba(0,0,0,.5);
+    background: rgba(0,0,0,.3);
+    justify-self: flex-end;
   }
 
   .box img {
@@ -380,29 +386,65 @@
 
 .contact {
   height: 100vh;
+
+  &-bg {
+    background-color: var(--pitufo);
+    z-index: 50;
+    padding: 3em 10em;
+    width: 800px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 .contact-container {
   position: relative;
   background: var(--pitufo);
-  overflow: hidden;
-}
-
-.contact-container .text {
-  text-align: center;
-  /* background-color: #0090ff; */
-  padding: 50px;
-  z-index: 2;
-  position: relative;
-  color: #fff;
-}
-
-.contact-container iframe {
   height: 100vh;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-  opacity: 0.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+
+  & h2 {
+    display: flex;
+    color: white;
+    font-family: var(--mont), sans-serif;
+    font-size: 45px;
+    text-align: left;
+    position: relative;
+    color: #fff;
+    z-index: 2;
+    margin-left: -12em;
+  }
+
+  & p {
+    display: flex;
+    align-self: flex-start;
+    text-align: left;
+    font-family: var(--lato), sans-serif;
+  }
+
+  & .text {
+    z-index: 2;
+    position: relative;
+    color: #fff;
+  }
+
+  & iframe {
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    opacity: 0.6;
+  }
+}
+
+.address {
+  align-self: flex-start;
 }

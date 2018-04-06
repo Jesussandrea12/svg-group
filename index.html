@@ -146,7 +146,7 @@
           <div class="grid-x">
             <div class="cell small-12 medium-6 large-6">
               <img data-open="case1" src="dist/images/caso-ejemplo.jpg" alt="ejemplo">
-              <div class="reveal" id="case1" data-reveal>
+              <div class="reveal fadeInRight" id="case1" data-reveal>
                 <div class="grid-x">
                   <div class="cell small-12 medium-5 large-6 modal-text">
                     <img src="dist/images/logo-empresa-caso.png" alt="logo-empresa">
@@ -207,24 +207,24 @@
         <h2>Capacidades</h2>
         <h3>Servicios globales de publicidad, medios y branding 360</h3>
         <div class="grid-x">
-          <div class="cell small-6 medium-4 large-2 icons-box">
-            <img class="consultoria" src="dist/images/consultoria.png" alt="consultoria">
+          <div class="cell small-6 medium-4 large-2 icons-box consultoria">
+            <img src="dist/images/consultoria.png" alt="consultoria">
             <p>consultoria</p>
           </div>
-          <div class="cell small-6 medium-4 large-2 icons-box">
-            <img class="promociones" src="dist/images/promociones.png" alt="promociones">
+          <div class="cell small-6 medium-4 large-2 icons-box promociones">
+            <img src="dist/images/promociones.png" alt="promociones">
             <p>promociones</p>
           </div>
-          <div class="cell small-6 medium-4 large-2 icons-box">
-            <img class="eventos" src="dist/images/eventos.png" alt="eventos">
+          <div class="cell small-6 medium-4 large-2 icons-box eventos">
+            <img src="dist/images/eventos.png" alt="eventos">
             <p>eventos</p>
           </div>
-          <div class="cell small-6 medium-4 large-2 icons-box">
-            <img class="hospitality" src="dist/images/hospitality.png" alt="hospitality">
+          <div class="cell small-6 medium-4 large-2 icons-box hospitality">
+            <img src="dist/images/hospitality.png" alt="hospitality">
             <p>hospitality</p>
           </div>
-          <div class="cell small-6 medium-4 large-2 icons-box">
-            <img class="planification" src="dist/images/planificacion.png" alt="planificacion">
+          <div class="cell small-6 medium-4 large-2 icons-box planification">
+            <img src="dist/images/planificacion.png" alt="planificacion">
             <p>planificacion de medios</p>
           </div>
         </div>
@@ -235,21 +235,33 @@
     <section class="planificacion">
       <div class="content">
         <div class="grid-x">
-          <div class="cell small-12 medium-6 large-6 box-text">
-            <h2>Planificación de medios</h2>
-            <p>La planificación e implementación de campañas
-              publicitarias en los medios dentro de la era digital, se
-              traduce en la correcta explotación de los múltiples
-              medios alternativos</p>
-            <p>La creatividad se multiplica, puesto que la planificación de
-              medios es la llave que conduce al éxito de la comunicación
-              de la marca.</p>
-            <p>En SV Group pensamos para decir “cómo” y buscamos las
-              mejores plataformas para decir “dónde”.</p>
+          <div class="cell small-12 medium-12 large-3">
           </div>
-          <div class="cell small-12 medium-6 large-6 box">
-            <img src="dist/images/planificacion.png" alt="planificacion">
+          <div class="cell small-12 medium-12 large-12">
+            <div class="grid-x">
+              <div class="cell small-12 medium-12 large-8 planificacion-text">
+                <h2>Planificación <br>de medios</h2>
+                <p>La planificación e implementación de campañas
+                  publicitarias en los medios dentro de la era digital, se
+                  traduce en la correcta explotación de los múltiples
+                  medios alternativos
+                </p>
+                <p>La creatividad se multiplica, puesto que la planificación de
+                  medios es la llave que conduce al éxito de la comunicación
+                  de la marca.
+                </p>
+                <p>En SV Group pensamos para decir “cómo” y buscamos las
+                  mejores plataformas para decir “dónde”.
+                </p>
+              </div>
+              <div class="cell small-12 medium-12 large-4">
+                <img src="dist/images/planificacion.png" alt="planificacion">
+              </div>
+            </div>
           </div>
+        </div>
+        </div>
+        <div class="grid-x">
         </div>
       </div>
     </section>
@@ -257,13 +269,15 @@
     <section class="contact">
       <div class="container">
         <div class="contact-container">
-          <h2 class="text">NUESTRAS OFICINAS</h2>
-          <p class="text">Avenida Libertador 15.000 <br>
-            B1642CKN San Isidro <br>
-            Buenos Aires <br>
-            Argentina</p>
-            <p class="text">+54 11 4742 8858</p>
-            <p class="text">contacto@sv-group.com.ar</p>
+          <h2 class="text">NUESTRAS <br>OFICINAS</h2>
+          <span class="contact-bg">
+            <p class="text address">Avenida Libertador 15.000 <br>
+              B1642CKN San Isidro <br>
+              Buenos Aires <br>
+              Argentina</p>
+            <p class="text info">contacto@sv-group.com.ar</p>
+            <p class="text info">+54 11 4742 8858</p>
+          </span>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3287.520505203094!2d-58.478681385150445!3d-34.515038480482595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5a12c181347%3A0xcc951cbda99d485e!2sAv.+del+Libertador%2C+Argentina!5e0!3m2!1ses!2sus!4v1523025095977" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
       </div>
@@ -295,16 +309,15 @@
                                sr.reveal(".about-us p",{delay:500,easing:"ease",duration:1200}),
                                sr.reveal(".capacidades-container h2",{delay:300,easing:"ease",duration:1200}),
                                sr.reveal(".capacidades-container h3",{delay:400,easing:"ease",duration:1200}),
-                               sr.reveal(".icons-box .consultoria",{delay:500,easing:"ease",duration:1200}),
-                               sr.reveal(".icons-box .promociones",{delay:700,easing:"ease",duration:1200}),
-                               sr.reveal(".icons-box .eventos",{delay:900,easing:"ease",duration:1200}),
-                               sr.reveal(".icons-box .hospitality",{delay:1100,easing:"ease",duration:1200})
-                               sr.reveal(".icons-box .planification",{delay:1300,easing:"ease",duration:1200})
+                               sr.reveal(".consultoria",{delay:500,easing:"ease",duration:1200}),
+                               sr.reveal(".promociones",{delay:700,easing:"ease",duration:1200}),
+                               sr.reveal(".eventos",{delay:900,easing:"ease",duration:1200}),
+                               sr.reveal(".hospitality",{delay:1100,easing:"ease",duration:1200})
+                               sr.reveal(".planification",{delay:1300,easing:"ease",duration:1200})
     </script>
 
 
     <!-- Css -->
-    <link href="https://fonts.googleapis.com/css?family=Barlow|Lato" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Lato" rel="stylesheet">
   </body>
 </html>
