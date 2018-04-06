@@ -7,6 +7,27 @@
     <link rel="stylesheet" href="dist/css/main.css">
   </head>
   <body>
+    <!-- offCanvas -->
+    <button class="menu-icon" type="button" data-toggle="offCanvasRight"></button>
+    <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas>
+      <!-- Close button -->
+      <button class="close-button" aria-label="Close menu" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+      </button>
+
+      <!-- Menu -->
+      <ul class="vertical menu">
+        <li><a href="#">Foundation</a></li>
+        <li><a href="#">Dot</a></li>
+        <li><a href="#">ZURB</a></li>
+        <li><a href="#">Com</a></li>
+        <li><a href="#">Slash</a></li>
+        <li><a href="#">Sites</a></li>
+      </ul>
+    </div>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+
     <!-- Top bar -->
     <div class="nav">
       <img class="logo" src="dist/images/logo.png" alt="logo">
@@ -17,10 +38,6 @@
       <div class="hero-wrapper-container">
         <div class="orbit hero-wrapper-container-slider" role="region" aria-label="pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
           <div class="orbit-wrapper">
-            <div class="orbit-controls">
-              <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
-              <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
-            </div>
             <ul class="orbit-container">
               <li class="orbit-slide">
                 <div>
@@ -48,12 +65,19 @@
               </li>
             </ul>
           </div>
+          <nav class="orbit-bullets">
+            <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+            <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+            <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+            <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+          </nav>
         </div>
         <span class="hero-wrapper-container-scroll"></span>
-        <video src="dist/images/cultura-baja.mp4" loop autoplay poster="posterimage.jpg"></video>
+        <video src="dist/images/home.mp4" loop autoplay poster="posterimage.jpg"></video>
       </div>
     </div>
 
+    <!-- cultura -->
     <div class="culture-wrapper">
       <div class="culture-wrapper-container">
         <div class="content">
@@ -96,12 +120,128 @@
       </div>
     </div>
 
+    <section class="cases-wrapper">
+      <div class="grid-x">
+        <div class="cell small-12 medium-12 large-6 cases-wrapper-half">
+          <h3>Casos <br>de éxito</h3>
+        </div>
+        <div class="cell small-12 medium-12 large-6 cases-wrapper-second">
+          <div class="grid-x">
+            <div class="cell small-12 medium-6 large-6">
+              <img src="dist/images/caso-ejemplo.jpg" alt="ejemplo">
+            </div>
+            <div class="cell small-12 medium-6 large-6">
+              <img src="dist/images/caso-ejemplo.jpg" alt="ejemplo">
+            </div>
+            <div class="cell small-12 medium-6 large-6">
+              <img src="dist/images/caso-ejemplo.jpg" alt="ejemplo">
+            </div>
+            <div class="cell small-12 medium-6 large-6">
+              <img src="dist/images/caso-ejemplo.jpg" alt="ejemplo">
+            </div>
+            <div class="cell small-12 medium-6 large-6">
+              <img src="dist/images/caso-ejemplo.jpg" alt="ejemplo">
+            </div>
+            <div class="cell small-12 medium-6 large-6">
+              <img src="dist/images/caso-ejemplo.jpg" alt="ejemplo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-us">
+      <div class="content about-us-text">
+        <h2>Nosotros</h2>
+        <h3>Construimos valor para las marcas, las 24hs. los 365 días del año.</h3>
+        <p>Iniciamos nuestro camino en el año ’88 comercializando derechos
+          de TV y estáticas para las principales competencias de fútbol de
+          América. Una agencia de marketing deportivo dedicada a la publicidad,
+          comunicación, comercialización y producción de eventos en toda
+          Latinoamérica y el mundo.</p>
+        <p>Nuestra trayectoria nos permite brindar servicios 360º de excelencia
+          y calidad, con una cobertura masiva que sólo deportes como el fútbol
+          logran. Y alianzas estratégicas que nos permiten llegar a cualquier
+          parte del mundo, garantizando un delivery masivo de la acción a
+          través de nuestras herramientas digitales.</p>
+      </div>
+    </section>
+
+    <section class="capacidades">
+      <div class="capacidades-container">
+        <h2>Capacidades</h2>
+        <h3>Servicios globales de publicidad, medios y branding 360</h3>
+        <div class="grid-x">
+          <div class="cell small-6 medium-4 large-2 icons-box">
+            <img src="dist/images/consultoria.png" alt="consultoria">
+            <p>consultoria</p>
+          </div>
+          <div class="cell small-6 medium-4 large-2 icons-box">
+            <img src="dist/images/promociones.png" alt="promociones">
+            <p>promociones</p>
+          </div>
+          <div class="cell small-6 medium-4 large-2 icons-box">
+            <img src="dist/images/eventos.png" alt="eventos">
+            <p>eventos</p>
+          </div>
+          <div class="cell small-6 medium-4 large-2 icons-box">
+            <img src="dist/images/hospitality.png" alt="hospitality">
+            <p>hospitality</p>
+          </div>
+          <div class="cell small-6 medium-4 large-2 icons-box">
+            <img src="dist/images/planificacion.png" alt="planificacion">
+            <p>planificacion de medios</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="planificacion">
+      <div class="content">
+        <div class="grid-x">
+          <div class="cell small-12 medium-6 large-6 box-text">
+            <h2>Planificación de medios</h2>
+            <p>La planificación e implementación de campañas
+              publicitarias en los medios dentro de la era digital, se
+              traduce en la correcta explotación de los múltiples
+              medios alternativos</p>
+            <p>La creatividad se multiplica, puesto que la planificación de
+              medios es la llave que conduce al éxito de la comunicación
+              de la marca.</p>
+            <p>En SV Group pensamos para decir “cómo” y buscamos las
+              mejores plataformas para decir “dónde”.</p>
+          </div>
+          <div class="cell small-12 medium-6 large-6 box">
+            <img src="dist/images/planificacion.png" alt="planificacion">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container">
+        <div class="contact-container">
+          <h2 class="text">NUESTRAS OFICINAS</h2>
+          <p class="text">Avenida Libertador 15.000 <br>
+            B1642CKN San Isidro <br>
+            Buenos Aires <br>
+            Argentina</p>
+            <p class="text">+54 11 4742 8858</p>
+            <p class="text">contacto@sv-group.com.ar</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3287.520505203094!2d-58.478681385150445!3d-34.515038480482595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5a12c181347%3A0xcc951cbda99d485e!2sAv.+del+Libertador%2C+Argentina!5e0!3m2!1ses!2sus!4v1523025095977" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </div>
+
 
     <!-- JavaScript -->
     <script src="dist/js/vendor/jquery.js"></script>
     <script src="dist/js/vendor/what-input.js"></script>
     <script src="dist/js/vendor/foundation.min.js"></script>
     <script src="dist/js/app.js"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
     <!-- Css -->
     <link href="https://fonts.googleapis.com/css?family=Barlow|Lato" rel="stylesheet">
