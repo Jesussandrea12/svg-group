@@ -368,9 +368,9 @@
     font-family: var(--lato);
   }
 
-  .content {
+  .bg-content {
     background: rgba(0,0,0,.3);
-    justify-self: flex-end;
+    padding: 1em 0 1em 1em;
   }
 
   .box img {
@@ -379,6 +379,10 @@
 
   .box-text {
     color: white;
+  }
+
+  &-content {
+    padding: 1em 0 1em 15em;
   }
 }
 
