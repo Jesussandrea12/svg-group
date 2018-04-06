@@ -1,21 +1,27 @@
 /* =============================== Top bar ====================================*/
-body {
-  background-attachment: fixed;
-}
 
 .logo {
-  width: 200px;
-  padding: 1em;
+  width: 210px;
+  margin: 2em;
   position: fixed;
   z-index: 999;
 }
 
-.menu-icon {
+.hamburger {
+  margin: 1.5em !important;
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  color: white;
+}
+
+.icon-button {
   padding: 1em;
   margin: 1em;
   position: fixed;
   z-index: 999;
-  right: 0;
+  left: 0;
+  top: 45vh;
 }
 
 /* ================================ Hero =====================================*/
@@ -55,6 +61,11 @@ body {
   z-index: 99;
   color: white;
   height: 100vh;
+}
+
+.orbit-bullets {
+  color: blue;
+  bottom: 0;
 }
 
 /* ============================== Culture ====================================*/
@@ -138,6 +149,7 @@ body {
     align-items: center;
     background: url('../images/back-casos.jpg');
     background-position: left center;
+    background-attachment: fixed;
     height: 100vh;
 
     & h3 {
@@ -160,11 +172,33 @@ body {
   }
 }
 
+.reveal {
+  background-color: #03b5d5;
+  border: none;
+  border-radius: none !important;
+}
+
+.modal-text {
+  padding: 1em;
+  background-color: #03b5d5;
+
+  &-title {
+    color: white;
+    font-family: var(--barlow), sans-serif;
+  }
+
+  &-desc {
+    color: white;
+    font-family: var(--lato), sans-serif;
+  }
+}
+
 /* ============================== About-us ====================================*/
 
 .about-us {
   height: 100vh;
   background: url('../images/back-nosotros.jpg');
+  background-attachment: fixed;
 
   &-text {
     display: flex;
@@ -199,6 +233,7 @@ body {
 .capacidades {
   height: 100vh;
   background: url('../images/back-capacidades.jpg');
+  background-attachment: fixed;
 
   & h2 {
     color: white;
@@ -228,23 +263,24 @@ body {
   flex: 1 1 auto;
 
   & img {
-    width: 150px;
+    width: 100px;
   }
 
   & p {
     text-align: center;
     color: white;
     text-transform: capitalize;
-    font-size: 20px;
+    font-size: 16px;
     font-family: var(--lato), sans-serif;
   }
 }
 
-/* ============================== Capacidades =================================*/
+/* ============================ planificacion =================================*/
 
 .planificacion {
   height: 100vh;
   background: url('../images/back-nosotros.jpg');
+  background-attachment: fixed;
   display: flex;
   justify-content: flex-end;
   align-items: center;

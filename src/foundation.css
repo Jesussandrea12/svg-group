@@ -3720,9 +3720,7 @@ html.is-reveal-open body {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   display: none;
-  padding: 1rem;
   border: 1px solid #cacaca;
-  border-radius: 3px;
   background-color: #fefefe;
   position: relative;
   top: 100px;

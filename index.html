@@ -8,16 +8,30 @@
   </head>
   <body>
     <!-- offCanvas -->
-    <button class="menu-icon" type="button" data-toggle="offCanvasRight"></button>
+    <button class="hamburger hamburger--slider" type="button" data-toggle="offCanvasRight">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
     <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas>
-      <!-- Close button -->
-      <button class="close-button" aria-label="Close menu" type="button" data-close>
-        <span aria-hidden="true">&times;</span>
-      </button>
-
       <!-- Menu -->
       <ul class="vertical menu">
         <li><a href="#">Foundation</a></li>
+        <li><a href="#">Dot</a></li>
+        <li><a href="#">ZURB</a></li>
+        <li><a href="#">Com</a></li>
+        <li><a href="#">Slash</a></li>
+        <li><a href="#">Sites</a></li>
+      </ul>
+    </div>
+
+    <button type="button" class="icon-button" data-toggle="offCanvasLeft">
+      <img src="dist/images/icon-home.png" alt="icon">
+    </button>
+    <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+      <!-- Menu -->
+      <ul class="vertical menu">
+        <li><a href="#">Hello</a></li>
         <li><a href="#">Dot</a></li>
         <li><a href="#">ZURB</a></li>
         <li><a href="#">Com</a></li>
@@ -128,7 +142,24 @@
         <div class="cell small-12 medium-12 large-6 cases-wrapper-second">
           <div class="grid-x">
             <div class="cell small-12 medium-6 large-6">
-              <img src="dist/images/caso-ejemplo.jpg" alt="ejemplo">
+              <img data-open="case1" src="dist/images/caso-ejemplo.jpg" alt="ejemplo">
+              <div class="reveal" id="case1" data-reveal>
+                <div class="grid-x">
+                  <div class="cell small-12 medium-5 large-6 modal-text">
+                    <img src="dist/images/logo-empresa-caso.png" alt="logo-empresa">
+                    <h2 class="modal-text-title">Conmebol Sudamericana.</h2>
+                    <p class="modal-text-desc">SV Group y MVA es la agencia Conmebol para la operación y logística de la Conmebol Sudamericana en Argentina, Bolivia, Brasil, Chile, Colombia, Ecuador, Paraguay, Perú, Uruguay y Venezuela. 10 países, 54 equipos, 106 partidos a lo largo de 11 meses.
+                      Consultoría y auditoría de cada juego.
+                    </p>
+                  </div>
+                  <div class="cell small-12 medium-5 large-6 modal-image">
+                    <img src="dist/images/caso-descripcion.jpg" alt="caso">
+                  </div>
+                </div>
+                <button class="close-button" data-close aria-label="Close modal" type="button">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
             </div>
             <div class="cell small-12 medium-6 large-6">
               <img src="dist/images/caso-ejemplo.jpg" alt="ejemplo">
@@ -167,36 +198,37 @@
       </div>
     </section>
 
+    <!-- capacidades -->
     <section class="capacidades">
       <div class="capacidades-container">
         <h2>Capacidades</h2>
         <h3>Servicios globales de publicidad, medios y branding 360</h3>
         <div class="grid-x">
           <div class="cell small-6 medium-4 large-2 icons-box">
-            <img src="dist/images/consultoria.png" alt="consultoria">
+            <img class="consultoria" src="dist/images/consultoria.png" alt="consultoria">
             <p>consultoria</p>
           </div>
           <div class="cell small-6 medium-4 large-2 icons-box">
-            <img src="dist/images/promociones.png" alt="promociones">
+            <img class="promociones" src="dist/images/promociones.png" alt="promociones">
             <p>promociones</p>
           </div>
           <div class="cell small-6 medium-4 large-2 icons-box">
-            <img src="dist/images/eventos.png" alt="eventos">
+            <img class="eventos" src="dist/images/eventos.png" alt="eventos">
             <p>eventos</p>
           </div>
           <div class="cell small-6 medium-4 large-2 icons-box">
-            <img src="dist/images/hospitality.png" alt="hospitality">
+            <img class="hospitality" src="dist/images/hospitality.png" alt="hospitality">
             <p>hospitality</p>
           </div>
           <div class="cell small-6 medium-4 large-2 icons-box">
-            <img src="dist/images/planificacion.png" alt="planificacion">
+            <img class="planification" src="dist/images/planificacion.png" alt="planificacion">
             <p>planificacion de medios</p>
           </div>
         </div>
       </div>
-
     </section>
 
+    <!-- planificacion -->
     <section class="planificacion">
       <div class="content">
         <div class="grid-x">
@@ -253,7 +285,18 @@
                                sr.reveal(".culture-wrapper-images .total",{delay:1000,easing:"ease",duration:1000}),
                                sr.reveal(".culture-wrapper-images .bumbet",{delay:1100,easing:"ease",duration:1000}),
                                sr.reveal(".culture-wrapper-images .conmebol",{delay:1200,easing:"ease",duration:1000}),
-                               sr.reveal(".culture-wrapper-images .autocredito",{delay:1300,easing:"ease",duration:1000})
+                               sr.reveal(".culture-wrapper-images .autocredito",{delay:1300,easing:"ease",duration:1000}),
+                               sr.reveal(".cases-wrapper-half h3",{delay:300,easing:"ease",duration:1000}),
+                               sr.reveal(".about-us h2",{delay:300,easing:"ease",duration:1200}),
+                               sr.reveal(".about-us h3",{delay:400,easing:"ease",duration:1200}),
+                               sr.reveal(".about-us p",{delay:500,easing:"ease",duration:1200}),
+                               sr.reveal(".capacidades-container h2",{delay:300,easing:"ease",duration:1200}),
+                               sr.reveal(".capacidades-container h3",{delay:400,easing:"ease",duration:1200}),
+                               sr.reveal(".icons-box .consultoria",{delay:500,easing:"ease",duration:1200}),
+                               sr.reveal(".icons-box .promociones",{delay:700,easing:"ease",duration:1200}),
+                               sr.reveal(".icons-box .eventos",{delay:900,easing:"ease",duration:1200}),
+                               sr.reveal(".icons-box .hospitality",{delay:1100,easing:"ease",duration:1200})
+                               sr.reveal(".icons-box .planification",{delay:1300,easing:"ease",duration:1200})
     </script>
 
 
