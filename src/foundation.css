@@ -4138,8 +4138,8 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   [data-whatinput='mouse'] .orbit-bullets {
     outline: 0; }
   .orbit-bullets button {
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 10px;
+    height: 10px;
     margin: 0.1rem;
     border-radius: 50%;
     background-color: #cacaca; }

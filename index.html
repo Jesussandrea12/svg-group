@@ -5,10 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
     <title>SVG GROUP | 24 7 360º</title>
     <link rel="stylesheet" href="dist/css/main.css">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="theme-color" content="#0090FF"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0090FF"/>
+    <link rel="icon" type="image/png" href="dist/images/icon-home.png" />
   </head>
   <body>
+    <!-- loader -->
+    <div class="spinner-container">
+      <div class="spinner" id="spinner">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+      </div>
+    </div>
+
     <!-- offCanvas -->
-    <button class="hamburger hamburger--slider" type="button" data-toggle="offCanvasRight">
+    <button class="hamburger hamburger--slider" type="button" id="burguer-button" data-toggle="offCanvasRight">
       <span class="hamburger-box">
         <span class="hamburger-inner"></span>
       </span>
@@ -19,54 +32,95 @@
 
         <ul class="offcanvas-full-screen-menu">
           <div class="grid-x">
-            <div class="cell small-4 close-btn">
-              <button class="offcanvas-full-screen-close" aria-label="Close menu" type="button" data-close>
-                <span aria-hidden="true">&times;</span>
-              </button>
+            <div class="cell small-3">
             </div>
             <div class="cell small-8">
-              <div class="box-menu">
-                <img src="dist/images/menu-ejemplo.jpg" alt="">
-              </div>
-              <div class="box-menu">
-                <img src="dist/images/menu-ejemplo.jpg" alt="">
-              </div>
-              <div class="box-menu">
-                <img src="dist/images/menu-ejemplo.jpg" alt="">
+              <div class="grid-x collapse">
+                <div class="medium-3 cell">
+                  <ul class="vertical tabs" data-tabs id="example-tabs">
+                    <li class="tabs-title is-active"><a href="#panel1v" aria-selected="true">Tab 1</a></li>
+                    <li class="tabs-title"><a href="#panel2v">Tab 2</a></li>
+                    <li class="tabs-title"><a href="#panel3v">Tab 3</a></li>
+                    <li class="tabs-title"><a href="#panel4v">Tab 4</a></li>
+                    <li class="tabs-title"><a href="#panel5v">Tab 5</a></li>
+                    <li class="tabs-title"><a href="#panel6v">Tab 6</a></li>
+                  </ul>
+                </div>
+                <div class="medium-9 cell">
+                  <div class="tabs-content" data-tabs-content="example-tabs">
+                    <div class="tabs-panel is-active" id="panel1v">
+                      <p>One</p>
+                      <p>Check me out! I'm a super cool Tab panel with text content!</p>
+                    </div>
+                    <div class="tabs-panel" id="panel2v">
+                      <p>Two</p>
+                      <img class="thumbnail" src="assets/img/generic/rectangle-7.jpg">
+                    </div>
+                    <div class="tabs-panel" id="panel3v">
+                      <p>Three</p>
+                      <p>Check me out! I'm a super cool Tab panel with text content!</p>
+                    </div>
+                    <div class="tabs-panel" id="panel4v">
+                      <p>Four</p>
+                      <img class="thumbnail" src="assets/img/generic/rectangle-2.jpg">
+                    </div>
+                    <div class="tabs-panel" id="panel5v">
+                      <p>Five</p>
+                      <p>Check me out! I'm a super cool Tab panel with text content!</p>
+                    </div>
+                    <div class="tabs-panel" id="panel6v">
+                      <p>Six</p>
+                      <img class="thumbnail" src="assets/img/generic/rectangle-8.jpg">
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="offcanvas-">
-
           </div>
         </ul>
       </div>
     </div>
 
-    <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas>
-      <!-- Menu -->
-      <ul class="vertical menu menu-offcanvas">
-        <li><a href="#">Foundation</a></li>
-        <li><a href="#">Dot</a></li>
-        <li><a href="#">ZURB</a></li>
-        <li><a href="#">Com</a></li>
-        <li><a href="#">Slash</a></li>
-        <li><a href="#">Sites</a></li>
-      </ul>
-    </div>
-
     <button type="button" class="icon-button" data-toggle="offcanvas-full-screen">
-      <img src="dist/images/icon-home.png" alt="icon">
+      <img class="two-dots" src="dist/images/icon-home.png" alt="icon">
     </button>
 
+    <header id="header" class="header contenedor"> <!-- header -->
+      <nav class="menu" id="menu"> <!-- menu -->
+        <ul data-magellan>
+          <li>
+            <a href="#cultura">Cultura</a>
+          </li>
+          <li>
+            <a href="#casos">Casos de éxito</a>
+          </li>
+          <li>
+            <a href="#nosotros">Nosotros</a>
+          </li>
+          <li>
+            <a href="#capacidades">Capacidades</a>
+          </li>
+          <li>
+            <a href="#planificacion">Planificación </a>
+          </li>
+          <li>
+            <a href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
     <div class="off-canvas-content" data-off-canvas-content>
+
     <!-- Top bar -->
-    <div class="nav">
-      <img class="logo" src="dist/images/logo.png" alt="logo">
+    <div class="nav" data-magellan>
+      <a href="#hero">
+        <img class="logo" src="dist/images/logo.png" alt="logo">
+      </a>
     </div>
 
     <!-- hero -->
-    <div class="hero-wrapper">
+    <div class="hero-wrapper" id="hero" data-magellan-target="hero">
       <div class="hero-wrapper-container">
         <div class="orbit hero-wrapper-container-slider" role="region" aria-label="pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
           <div class="orbit-wrapper">
@@ -97,8 +151,8 @@
               </li>
             </ul>
           </div>
-          <section id="section04" class="demo">
-            <a href="#section05"><span></span></a>
+          <section id="section04" class="demo" data-magellan>
+            <a href="#cultura"><span></span></a>
           </section>
           <nav class="orbit-bullets">
             <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
@@ -113,7 +167,7 @@
     </div>
 
     <!-- cultura -->
-    <div class="culture-wrapper">
+    <div class="culture-wrapper" id="cultura" data-magellan-target="cultura">
       <div class="culture-wrapper-container">
         <div class="content">
           <h2 class="culture-wrapper-container-title">Cultura</h2>
@@ -155,7 +209,8 @@
       </div>
     </div>
 
-    <section class="cases-wrapper">
+    <!-- casos -->
+    <section class="cases-wrapper" id="casos" data-magellan-target="casos">
       <div class="grid-x">
         <div class="cell small-12 medium-12 large-6 cases-wrapper-half">
           <h3>Casos <br>de éxito</h3>
@@ -164,7 +219,7 @@
           <div class="grid-x">
             <div class="cell small-12 medium-6 large-6">
               <img data-open="case1" src="dist/images/caso-ejemplo.jpg" alt="ejemplo">
-              <div class="reveal" id="case1" data-reveal>
+              <div class="reveal caso1" id="case1" data-reveal>
                 <div class="grid-x">
                   <div class="cell small-12 medium-5 large-6 modal-text">
                     <img src="dist/images/logo-empresa-caso.png" alt="logo-empresa">
@@ -202,7 +257,8 @@
       </div>
     </section>
 
-    <section class="about-us">
+    <!-- nosotros -->
+    <section class="about-us" id="nosotros" data-magellan-target="nosotros">
       <div class="content about-us-text">
         <h2>Nosotros</h2>
         <h3>Construimos valor para las marcas, las 24hs. los 365 días del año.</h3>
@@ -220,7 +276,7 @@
     </section>
 
     <!-- capacidades -->
-    <section class="capacidades">
+    <section class="capacidades" id="capacidades" data-magellan-target="capacidades">
       <div class="capacidades-container">
         <h2>Capacidades</h2>
         <h3>Servicios globales de publicidad, medios y branding 360</h3>
@@ -250,7 +306,7 @@
     </section>
 
     <!-- planificacion -->
-    <section class="planificacion">
+    <section class="planificacion" id="planificacion" data-magellan-target="planificacion">
       <div class="planificacion-content">
         <div class="grid-x">
           <div class="cell small-12 medium-12 large-3">
@@ -284,7 +340,8 @@
       </div>
     </section>
 
-    <section class="contact">
+    <!-- contacto -->
+    <section class="contact" id="contacto" data-magellan-target="contacto">
       <div class="container">
         <div class="contact-container">
           <h2 class="text">NUESTRAS <br>OFICINAS</h2>
@@ -312,32 +369,40 @@
     <script src="dist/js/app.js"></script>
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <script type="text/javascript">
-      window.sr=ScrollReveal({reset:true}),sr.reveal(".culture-wrapper-container-title",{delay:300,origin:'top',easing:"ease",duration:800}),
-                               sr.reveal(".culture-wrapper-container-subtitle",{delay:400,origin:'top',easing:"ease",duration:800}),
-                               sr.reveal(".culture-wrapper-container-desc",{delay:500,origin:'top',easing:"ease",duration:800}),
-                               sr.reveal(".culture-wrapper-images .toyota",{delay:600,easing:"ease",duration:4000}),
-                               sr.reveal(".culture-wrapper-images .bridgestone",{delay:900,easing:"ease",duration:4000}),
-                               sr.reveal(".culture-wrapper-images .santander",{delay:1200,easing:"ease",duration:4000}),
-                               sr.reveal(".culture-wrapper-images .sudamericana",{delay:1500,easing:"ease",duration:4000}),
-                               sr.reveal(".culture-wrapper-images .total",{delay:1800,easing:"ease",duration:4000}),
-                               sr.reveal(".culture-wrapper-images .bumbet",{delay:2100,easing:"ease",duration:4000}),
-                               sr.reveal(".culture-wrapper-images .conmebol",{delay:2300,easing:"ease",duration:4000}),
-                               sr.reveal(".culture-wrapper-images .autocredito",{delay:2600,easing:"ease",duration:4000}),
-                               sr.reveal(".cases-wrapper-half h3",{delay:300,easing:"ease",duration:1000}),
-                               sr.reveal(".about-us h2",{delay:300,easing:"ease",duration:1200}),
-                               sr.reveal(".about-us h3",{delay:400,easing:"ease",duration:1200}),
-                               sr.reveal(".about-us p",{delay:500,easing:"ease",duration:1200}),
-                               sr.reveal(".capacidades-container h2",{delay:300,easing:"ease",duration:1200}),
-                               sr.reveal(".capacidades-container h3",{delay:400,easing:"ease",duration:1200}),
-                               sr.reveal(".consultoria",{delay:500,easing:"ease",duration:1200}),
-                               sr.reveal(".promociones",{delay:700,easing:"ease",duration:1200}),
-                               sr.reveal(".eventos",{delay:900,easing:"ease",duration:1200}),
-                               sr.reveal(".hospitality",{delay:1100,easing:"ease",duration:1200})
-                               sr.reveal(".planification",{delay:1300,easing:"ease",duration:1200})
+      window.sr=ScrollReveal({reset:true, viewFactor: 0.8,}),
+                              // sr.reveal(".hero-wrapper",{delay:100,scale:1,easing:"ease",opacity:0,duration:1000}),
+                              sr.reveal(".culture-wrapper",{delay:100,scale:1,easing:"ease",opacity:0,duration:1000}),
+                              sr.reveal(".culture-wrapper-container-title",{delay:300,distance:'100px',scale: 1,easing:"ease",duration:800}),
+                              sr.reveal(".culture-wrapper-container-subtitle",{delay:400,distance:'100px',scale:1,easing:"ease",duration:800}),
+                              sr.reveal(".culture-wrapper-container-desc",{delay:500,distance:'100px',scale:1,easing:"ease",duration:800}),
+                              sr.reveal(".culture-wrapper-images .toyota",{delay:800,distance:'0',easing:"ease",scale: 1,duration:5000}),
+                              sr.reveal(".culture-wrapper-images .bridgestone",{delay:1800,distance:'0',scale: 1,easing:"ease",duration:5000}),
+                              sr.reveal(".culture-wrapper-images .santander",{delay:2800,distance:'0',scale: 1,easing:"ease",duration:5000}),
+                              sr.reveal(".culture-wrapper-images .sudamericana",{delay:3800,distance:'0',scale: 1,easing:"ease",duration:5000}),
+                              sr.reveal(".culture-wrapper-images .total",{delay:4800,distance:'0',scale: 1,easing:"ease",duration:5000}),
+                              sr.reveal(".culture-wrapper-images .bumbet",{delay:5800,distance:'0',scale: 1,easing:"ease",duration:5000}),
+                              sr.reveal(".culture-wrapper-images .conmebol",{delay:6800,distance:'0',scale: 1,easing:"ease",duration:5000}),
+                              sr.reveal(".culture-wrapper-images .autocredito",{delay:7800,distance:'0',scale: 1,easing:"ease",duration:5000}),
+                              sr.reveal(".cases-wrapper",{delay:100,scale:1,easing:"ease",opacity:0,duration:1000}),
+                              sr.reveal(".cases-wrapper-half h3",{delay:400,distance:'50px',scale:1,easing:"ease",duration:1000}),
+                              sr.reveal(".about-us",{delay:100,scale:1,easing:"ease",opacity:0,duration:1000}),
+                              sr.reveal(".about-us h2",{delay:300,distance:'100px',scale:1,easing:"ease",duration:1000}),
+                              sr.reveal(".about-us h3",{delay:400,distance:'100px',scale:1,easing:"ease",duration:1000}),
+                              sr.reveal(".about-us p",{delay:500,distance:'100px',scale:1,easing:"ease",duration:1000}),
+                              sr.reveal(".capacidades",{delay:100,scale:1,easing:"ease",opacity:0,duration:1000}),
+                              sr.reveal(".capacidades-container h2",{delay:300,easing:"ease",duration:1200}),
+                              sr.reveal(".capacidades-container h3",{delay:400,easing:"ease",duration:1200}),
+                              sr.reveal(".capacidades",{delay:100,scale:1,easing:"ease",opacity:0,duration:1000}),
+                              sr.reveal(".consultoria",{delay:500,easing:"ease",duration:1200}),
+                              sr.reveal(".promociones",{delay:700,easing:"ease",duration:1200}),
+                              sr.reveal(".eventos",{delay:900,easing:"ease",duration:1200}),
+                              sr.reveal(".hospitality",{delay:1100,easing:"ease",duration:1200}),
+                              sr.reveal(".planificacion",{delay:100,scale:1,easing:"ease",opacity:0,duration:1000}),
+                              sr.reveal(".planification",{delay:1300,easing:"ease",duration:1200}),
+                              sr.reveal(".contact",{delay:100,scale:1,easing:"ease",opacity:0,duration:1000})
     </script>
 
-
     <!-- Css -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Lato" rel="stylesheet">
   </body>
 </html>

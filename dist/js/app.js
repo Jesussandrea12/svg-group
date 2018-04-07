@@ -1,18 +1,20 @@
 $(document).foundation()
 
 $(document).ready(function(){
-	$('.hamburger').click(function(){
-		$(this).toggleClass('is-active');
-	});
+	$('.spinner-container').css("display","none");
+	$('#spinner').css("display","none");
+	$('.icon-button').css("display","block");
 });
 
-$('.button').click(function(){
-  var buttonId = $(this).attr('id');
-  $('#modal-container').removeAttr('class').addClass(buttonId);
-  $('body').addClass('modal-active');
+$('.hamburger').click(function(){
+	$(this).toggleClass('is-active');
+});
+
+$('#menu li a').click(function () {
+	$('#menu').removeClass('active');
+	$('.hamburger').removeClass('is-active');
 })
 
-$('#modal-container').click(function(){
-  $(this).addClass('out');
-  $('body').removeClass('modal-active');
+$('#burguer-button').click(function(){
+	$('#menu').toggleClass('active');
 });

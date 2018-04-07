@@ -1,7 +1,7 @@
 :root {
   /* fonts */
-  --mont: 'Montserrat';
-  --lato: 'Lato';
+  --roboto: 'Roboto', sans-serif;
+  --lato: 'Lato', sans-serif;
   /* colors */
   --pitufo: #00afed;
 }
