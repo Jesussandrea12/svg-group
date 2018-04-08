@@ -361,6 +361,13 @@ body { background-color: #0153ff; }
   }
 }
 
+.planification {
+
+  &:hover {
+    transform: scale(1.5);
+  }
+}
+
 .icons-box {
   display: flex;
   align-self: center;
@@ -371,6 +378,14 @@ body { background-color: #0153ff; }
 
   & img {
     width: 100px;
+    cursor: pointer;
+    transition: .5s ease all;
+
+    &:hover {
+      transform: scale(1.5);
+      color: #0090FF;
+      filter: opacity(0.8) drop-shadow(0 0 0 #0090FF);
+    }
   }
 
   & p {
@@ -380,6 +395,7 @@ body { background-color: #0153ff; }
     font-size: 16px;
     font-family: var(--lato);
   }
+
 }
 
 /* ============================ planificacion =================================*/

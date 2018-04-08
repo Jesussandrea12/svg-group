@@ -27,7 +27,7 @@
 }
 
 .offcanvas-full-screen.is-transition-overlap.is-open {
-  box-shadow: 0 0 10px rgba(10, 10, 10, 0.7);
+  box-shadow: 0 0 10px #333;
 }
 
 .offcanvas-full-screen.is-open {
@@ -48,7 +48,7 @@
   right: 0;
   height: 100%;
   width: 1px;
-  box-shadow: 0 0 10px rgba(10, 10, 10, 0.7);
+  box-shadow: 0 0 10px #333;
   content: " ";
 }
 
@@ -151,26 +151,85 @@
   top: 30vh;
 } */
 
-.desplegable {
-  background-color: #000;
+.menu-opts {
+  /* background-color: #333; */
   height: 100vh;
-  width: 100vw;
 }
 
-.box-menu-1, .box-menu-2, .box-menu-3 {
+.box-news-1, .box-news-2, .box-news-3 {
   background: url('../images/caso-ejemplo.jpg');
-  filter: grayscale(90%);
+  filter: grayscale(70%);
   background-position: center;
   background-size: cover;
   height: 33.33333%;
   width: 800px;
-  transition: .5s ease-in-out all;
+  /* transition: .5s ease-in-out all; */
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 
   &:hover {
     filter: grayscale(0);
   }
+
+  & a, p {
+    font-size: 20px;
+    padding-left: 1em;
+    font-family: var(--lato);
+    color: #d4d4d4;
+  }
 }
 
-.drilldown a {
-  background: none;
+.box-news-1-open-header, .box-news-2-open-header, .box-news-3-open-header {
+  background: url('../images/caso-ejemplo.jpg');
+  filter: grayscale(70%);
+  background-position: center;
+  background-size: cover;
+  height: 33.33333%;
+  width: 600px;
+  height: 200px;
+  /* transition: .5s ease-in-out all; */
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  cursor: pointer;
+
+  & a, p {
+    font-size: 20px;
+    padding-left: 1em;
+    font-family: var(--lato);
+    color: #d4d4d4;
+  }
+}
+
+.box-news-1-open, .box-news-2-open, .box-news-3-open {
+  background-color: #f9f9f9;
+  width: 41vw;
+  height: 100vh;
+  z-index: 999;
+  transition: .5s;
+  display: none;
+}
+
+.box-news-desc {
+  /* width: 100px; */
+  height: 100vh;
+  padding: 1em;
+
+  & p {
+    font-size: 16px;
+    font-family: var(--lato);
+    color: #333;
+    text-align: left;
+  }
+}
+
+.box-news-back {
+  position: absolute;
+  bottom: 0;
+  /* right: 0; */
+  z-index: 999999999;
+  padding: 1em;
+  width: 80px;
+  height: 80px;
 }
