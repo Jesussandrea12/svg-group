@@ -1,6 +1,6 @@
 $(document).foundation()
 
-$(document).ready(function(){
+$(window).on('load', function(){
 	$('.spinner-container').css("display","none");
 	$('#spinner').css("display","none");
 	$('.icon-button').css("display","block");
@@ -21,27 +21,29 @@ $('#burguer-button').click(function(){
 
 // Menu Left
 $('#box-news-1').click(function(){
-	$('.box-news-1-open').slideToggle("slow","swing");
+	$('.box-news-1-open').fadeTo(500,1);
 });
 
 $('.box-news-back').click(function(){
-	$('.box-news-1-open').css("display","none");
+	$('.box-news-1-open').fadeOut(500,0);
 });
+
 // 2
 $('#box-news-2').click(function(){
-	$('.box-news-2-open').slideToggle("slow","swing");
+	$('.box-news-2-open').fadeTo(500,1);
 });
 
 $('.box-news-back').click(function(){
-	$('.box-news-2-open').css("display","none");
+	$('.box-news-2-open').fadeOut(500,0);
 });
+
 // 3
 $('#box-news-3').click(function(){
-	$('.box-news-3-open').slideToggle("slow","swing");
+	$('.box-news-3-open').fadeTo(500,1);
 });
 
 $('.box-news-back').click(function(){
-	$('.box-news-3-open').css("display","none");
+	$('.box-news-3-open').fadeOut(500,0);
 });
 
 // Overlay
@@ -97,43 +99,37 @@ $('.modal-exit').click(function(){
 });
 
 // lightbox
-$('.lightbox-1').click(function(){
-	// $('.overlay-one').removeClass('active');
+$('.modal-image-1').click(function(){
 	$('.overlay-lightbox-1').addClass('active');
 });
 $('.lightbox-exit-1').click(function(){
 	$('.overlay-lightbox-1').removeClass('active');
 });
-$('.lightbox-2').click(function(){
-	// $('.overlay-one').removeClass('active');
+$('.modal-image-2').click(function(){
 	$('.overlay-lightbox-2').addClass('active');
 });
 $('.lightbox-exit-2').click(function(){
 	$('.overlay-lightbox-2').removeClass('active');
 });
-$('.lightbox-3').click(function(){
-	// $('.overlay-one').removeClass('active');
+$('.modal-image-3').click(function(){
 	$('.overlay-lightbox-3').addClass('active');
 });
 $('.lightbox-exit-3').click(function(){
 	$('.overlay-lightbox-3').removeClass('active');
 });
-$('.lightbox-4').click(function(){
-	// $('.overlay-one').removeClass('active');
+$('.modal-image-4').click(function(){
 	$('.overlay-lightbox-4').addClass('active');
 });
 $('.lightbox-exit-4').click(function(){
 	$('.overlay-lightbox-4').removeClass('active');
 });
-$('.lightbox-5').click(function(){
-	// $('.overlay-one').removeClass('active');
+$('.modal-image-5').click(function(){
 	$('.overlay-lightbox-5').addClass('active');
 });
 $('.lightbox-exit-5').click(function(){
 	$('.overlay-lightbox-5').removeClass('active');
 });
-$('.lightbox-6').click(function(){
-	// $('.overlay-one').removeClass('active');
+$('.modal-image-6').click(function(){
 	$('.overlay-lightbox-6').addClass('active');
 });
 $('.lightbox-exit-6').click(function(){
@@ -152,31 +148,41 @@ $('.grid-extra-exit').click(function() {
 // Capacidades modal
 $('.consultoria').click(function() {
 	$('.planificacion-1').addClass('active')
+	$('.planificacion-1').css('animation', 'modalIn 3s forwards');
 })
 $('.promociones').click(function() {
 	$('.planificacion-2').addClass('active')
+	$('.planificacion-2').css('animation', 'modalIn 3s forwards');
 })
 $('.eventos').click(function() {
 	$('.planificacion-3').addClass('active')
+	$('.planificacion-3').css('animation', 'modalIn 3s forwards');
 })
 $('.hospitality').click(function() {
 	$('.planificacion-4').addClass('active')
+	$('.planificacion-4').css('animation', 'modalIn 3s forwards');
 })
 $('.planification').click(function() {
 	$('.planificacion-5').addClass('active')
+	$('.planificacion-5').css('animation', 'modalIn 3s forwards');
 })
 $('.planificacion-1-exit').click(function() {
 	$('.planificacion-1').removeClass('active')
+	$('.planificacion-1').css('animation', 'modalOut 3s forwards');
 })
 $('.planificacion-2-exit').click(function() {
 	$('.planificacion-2').removeClass('active')
+	$('.planificacion-2').css('animation', 'modalOut 3s forwards');
 })
 $('.planificacion-3-exit').click(function() {
 	$('.planificacion-3').removeClass('active')
+	$('.planificacion-3').css('animation', 'modalOut 3s forwards');
 })
 $('.planificacion-4-exit').click(function() {
 	$('.planificacion-4').removeClass('active')
+	$('.planificacion-4').css('animation', 'modalOut 3s forwards');
 })
 $('.planificacion-5-exit').click(function() {
 	$('.planificacion-5').removeClass('active')
+	$('.planificacion-5').css('animation', 'modalOut 3s forwards');
 })

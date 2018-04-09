@@ -1,6 +1,6 @@
 /* General */
 html { overflow-y:hidden; }
-body { background-color: #0153ff; }
+body { background-color: var(--azul); }
 
 /* =============================== Top bar ====================================*/
 
@@ -43,7 +43,7 @@ body { background-color: #0153ff; }
 
 .icon-button {
   padding: 1em;
-  margin: 1em;
+  margin: .8em;
   position: fixed;
   z-index: 9999999;
   left: 0;
@@ -54,12 +54,24 @@ body { background-color: #0153ff; }
 
   &:hover {
     /* filter: blur(1px); */
-    transform: scale(.8);
+    transform: scale(1.2);
   }
+}
+
+.box-btn {
+  display: flex;
 }
 
 .two-dots {
   opacity: 1;
+
+  &-text {
+    color: white;
+    font-family: var(--lato);
+    font-size: 10px;
+    font-style: normal;
+    text-transform: uppercase;
+  }
 }
 
 /* ================================ Hero =====================================*/
@@ -232,7 +244,7 @@ body { background-color: #0153ff; }
   left: 0;
   bottom: 0;
   display: flex;
-  z-index: 999999999999999999;
+  z-index: 999999999;
   align-items: center;
   padding-left: 15vw;
   justify-content: center;
@@ -278,7 +290,7 @@ body { background-color: #0153ff; }
 .lightbox-exit-1, .lightbox-exit-2, .lightbox-exit-3, .lightbox-exit-4,
 .lightbox-exit-5, .lightbox-exit-6 {
   position: fixed;
-  top: 0;
+  bottom: 0;
   right: 0;
   color: white;
   margin: 1em;
@@ -311,6 +323,8 @@ body { background-color: #0153ff; }
 }
 
 .cases-wrapper {
+  margin: 0 !important;
+  padding: 0 !important;
   height: 100vh;
 
   &-half {
@@ -327,6 +341,7 @@ body { background-color: #0153ff; }
       font-family: var(--roboto);
       font-size: 45px;
       color: white;
+      line-height: 1em;
     }
   }
 
@@ -343,13 +358,14 @@ body { background-color: #0153ff; }
 
   & img {
     max-width: 100%;
-    transition: all 0.3s;
+    transition: ease all 0.4s;
     width: 100%;
     height: 100%;
     cursor: pointer;
 
     &:hover{
       transform: scale(1.1);
+      filter: grayscale(60%);
     }
   }
 
@@ -359,6 +375,7 @@ body { background-color: #0153ff; }
 }
 
 .more-grid {
+  display: flex;
   padding: 1em;
   margin: 1em;
   /* position: absolute; */
@@ -367,6 +384,15 @@ body { background-color: #0153ff; }
   width: 80px;
   height:80px;
   cursor: pointer;
+
+  & p {
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-left: 1em;
+    padding-top: 1em;
+    width: 100%;
+  }
 }
 
 .modal-text {
@@ -390,14 +416,27 @@ body { background-color: #0153ff; }
   }
 }
 
-.modal-image {
+.modal-image-1, .modal-image-2, .modal-image-3, .modal-image-4, .modal-image-5, .modal-image-6 {
+  position: relative;
+  overflow: hidden;
+
   & img {
     height: 70vh;
+    transition: .3s all ease;
+    width: auto;
+    max-width: auto;
+    cursor: pointer;
+
+
+    &:hover{
+      transform: scale(1.1);
+      filter: grayscale(60%);
+    }
   }
 }
 
 .lightbox-1, .lightbox-2, .lightbox-3, .lightbox-4, .lightbox-5, .lightbox-6 {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   right: 0;
   margin: 1em;
@@ -411,7 +450,7 @@ body { background-color: #0153ff; }
 
 .modal-exit {
   position: fixed;
-  top: 0;
+  bottom: 0;
   right: 0;
   color: white;
   margin: 1em;
@@ -457,6 +496,7 @@ body { background-color: #0153ff; }
   height: 100vh;
   background: url('../images/back-nosotros.jpg');
   background-attachment: fixed;
+  z-index: 2;
 
   &-text {
     display: flex;
@@ -489,18 +529,19 @@ body { background-color: #0153ff; }
 /* ============================== Grid Extra =================================*/
 
 .grid-extra {
-  height: 100vh;
   position: fixed;
+  height: 100vh;
   top: 0;
-  left: 0;
+  right: 0;
   bottom: 0;
-  display: flex;
+  left: 50%;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   z-index: 999999;
   opacity: 0;
-  visibility: hidden;
   transition: 1s ease;
+  visibility: hidden;
   overflow: hidden;
 
   &.active {
@@ -519,9 +560,9 @@ body { background-color: #0153ff; }
   }
 
   &-exit {
-    z-index: 99999999999999999999999999999999999999999999999999999;
+    z-index: 99999999999;
     position: absolute;
-    top: 0;
+    bottom: 0;
     right: 0;
     margin: 1em;
     padding: 1em;
@@ -588,17 +629,11 @@ body { background-color: #0153ff; }
   flex-direction: column;
   padding: 1em;
   flex: 1 1 auto;
+  transition: .5s ease all;
+  cursor: pointer;
 
   & img {
     width: 100px;
-    cursor: pointer;
-    transition: .5s ease all;
-
-    &:hover {
-      transform: scale(1.5);
-      color: #0090FF;
-      filter: opacity(0.8) drop-shadow(0 0 0 #0090FF);
-    }
   }
 
   & p {
@@ -609,6 +644,15 @@ body { background-color: #0153ff; }
     font-family: var(--lato);
   }
 
+  & .scale {
+    transition: .5s ease-in-out all;
+
+    &:hover {
+      transform: scale(1.3);
+      filter: opacity(.6) drop-shadow(0 0 0 blue);
+      /* color: var(--pitufo); */
+    }
+  }
 }
 
 /* ============================ planificacion =================================*/
@@ -617,18 +661,14 @@ body { background-color: #0153ff; }
 .planificacion-5 {
   height: 100vh;
   background: url('../images/bg-planificacion.jpg');
-  background-attachment: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
+  background-position: left center;
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   z-index: 999999;
+  display: flex;
   align-items: center;
-  padding-left: 15vw;
   justify-content: center;
   opacity: 0;
   visibility: hidden;
@@ -641,21 +681,25 @@ body { background-color: #0153ff; }
 
   &-text {
     color: white;
+    padding: 3em 1em 2em 4em;
 
     & h2 {
       font-family: var(--roboto);
+      font-size: 45px;
+      line-height: 1em;
     }
 
     & p {
       font-family: var(--lato);
+      font-size: 20px;
     }
   }
 
   &-exit {
-    z-index: 9999999999999999999999999999999999999999;
+    z-index: 99999999999;
     position: absolute;
-    top: 0;
-    right: 0;
+    bottom: 0;
+    left: 46%;
     margin: 1em;
     padding: 1em;
     font-size: 24px;
@@ -722,6 +766,7 @@ body { background-color: #0153ff; }
     color: #fff;
     z-index: 2;
     margin-left: -11em;
+    line-height: 1em;
   }
 
   & p {
