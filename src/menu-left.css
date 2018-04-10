@@ -165,7 +165,7 @@
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  transition: .3s ease all;
+  transition: 1s ease all;
   cursor: pointer;
 
   &:hover {
@@ -182,6 +182,12 @@
     &:hover {
       color: #888;
     }
+  }
+
+  &:hover {
+    transition: 1s ease all;
+    background-size: 150%;
+    /* background-position: left; */
   }
 }
 

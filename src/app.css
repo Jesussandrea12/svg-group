@@ -1,6 +1,25 @@
 /* General */
-html { overflow-y:hidden; }
-body { background-color: var(--azul); }
+html {
+  /* overflow-y:hidden; */
+  scroll-snap-type: mandatory;
+
+  /* older spec implementation */
+  scroll-snap-destination: 100% 0%;
+  scroll-snap-points-y: repeat(100%);
+}
+body {
+  background-color: var(--azul);
+  scroll-snap-align: start;
+  overflow-x: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  scroll-snap-points-y: repeat(100%);
+  scroll-snap-type: mandatory;
+  scroll-snap-destination: 100% 0%;
+}
 
 /* =============================== Top bar ====================================*/
 
@@ -80,11 +99,11 @@ body { background-color: var(--azul); }
   position: relative;
   overflow: hidden;
   height: 100vh;
+  text-align: center;
 
   &-title {
     font-family: var(--roboto);
     font-size: 90px;
-    text-align: center;
   }
 
   &-subtitle {
@@ -367,10 +386,6 @@ body { background-color: var(--azul); }
       transform: scale(1.1);
       filter: grayscale(60%);
     }
-  }
-
-  & span {
-    z-index: 10;
   }
 }
 

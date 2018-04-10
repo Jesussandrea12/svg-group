@@ -91,7 +91,7 @@
 
     <header id="header" class="header contenedor"> <!-- header -->
       <nav class="menu" id="menu"> <!-- menu -->
-        <ul data-magellan>
+        <ul>
           <li>
             <a href="#cultura">Cultura</a>
           </li>
@@ -121,7 +121,7 @@
     </div>
 
     <!-- hero -->
-    <div class="hero-wrapper" id="hero" data-magellan-target="hero">
+    <div class="hero-wrapper scroll" id="hero" data-magellan-target="hero">
       <div class="hero-wrapper-container">
         <div class="orbit hero-wrapper-container-slider" role="region" aria-label="pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
           <div class="orbit-wrapper">
@@ -168,7 +168,7 @@
     </div>
 
     <!-- cultura -->
-    <div class="culture-wrapper" id="cultura" data-magellan-target="cultura">
+    <div class="culture-wrapper scroll" id="cultura" data-magellan-target="cultura">
       <div class="culture-wrapper-container">
         <div class="content">
           <h2 class="culture-wrapper-container-title">Cultura</h2>
@@ -211,7 +211,7 @@
     </div>
 
     <!-- casos -->
-    <section class="cases-wrapper" id="casos" data-magellan-target="casos">
+    <section class="cases-wrapper scroll" id="casos" data-magellan-target="casos">
       <div class="grid-x">
         <div class="cell small-12 medium-12 large-6 cases-wrapper-half">
           <h3>Casos <br>de éxito</h3>
@@ -244,7 +244,7 @@
         </div>
 
         <!-- cases modal -->
-        <div class="cases">
+        <div class="cases scroll">
           <div class="case overlay-one">
             <div class="grid-x modal-one">
               <div class="cell small-12 medium-5 large-6 modal-text">
@@ -400,22 +400,22 @@
           <div class="grid-x">
             <span class="icon-cross grid-extra-exit"></span>
             <div class="cell small-12 medium-6 large-6 box-case-one">
-              <img src="dist/images/caso-ejemplo.jpg" alt="ejemplo">
+              <img src="dist/images/menu-ejemplo.jpg" alt="ejemplo">
             </div>
             <div class="cell small-12 medium-6 large-6 box-case-two">
-              <img src="dist/images/caso-ejemplo.jpg" alt="ejemplo">
+              <img src="dist/images/menu-ejemplo.jpg" alt="ejemplo">
             </div>
             <div class="cell small-12 medium-6 large-6 box-case-three">
-              <img src="dist/images/caso-ejemplo.jpg" alt="ejemplo">
+              <img src="dist/images/menu-ejemplo.jpg" alt="ejemplo">
             </div>
             <div class="cell small-12 medium-6 large-6 box-case-four">
-              <img src="dist/images/caso-ejemplo.jpg" alt="ejemplo">
+              <img src="dist/images/menu-ejemplo.jpg" alt="ejemplo">
             </div>
             <div class="cell small-12 medium-6 large-6 box-case-five">
-              <img src="dist/images/caso-ejemplo.jpg" alt="ejemplo">
+              <img src="dist/images/menu-ejemplo.jpg" alt="ejemplo">
             </div>
             <div class="cell small-12 medium-6 large-6 box-case-six">
-              <img src="dist/images/caso-ejemplo.jpg" alt="ejemplo">
+              <img src="dist/images/menu-ejemplo.jpg" alt="ejemplo">
             </div>
           </div>
         </div>
@@ -425,7 +425,7 @@
     </section>
 
     <!-- nosotros -->
-    <section class="about-us" id="nosotros" data-magellan-target="nosotros">
+    <section class="about-us scroll" id="nosotros" data-magellan-target="nosotros">
       <div class="content about-us-text">
         <h2>Nosotros</h2>
         <h3>Construimos valor para las marcas, las 24hs. los 365 días del año.</h3>
@@ -443,7 +443,7 @@
     </section>
 
     <!-- capacidades -->
-    <section class="capacidades" id="capacidades" data-magellan-target="capacidades">
+    <section class="capacidades scroll" id="capacidades" data-magellan-target="capacidades">
       <div class="capacidades-container">
         <h2>Capacidades</h2>
         <h3>Servicios globales de publicidad, medios y branding 360</h3>
@@ -641,7 +641,7 @@
 
 
     <!-- contacto -->
-    <section class="contact" id="contacto" data-magellan-target="contacto" data-options="offset: -5000px;">
+    <section class="contact scroll" id="contacto" data-magellan-target="contacto" data-options="offset: -5000px;">
       <div class="container">
         <div class="contact-container">
           <h2 class="text">NUESTRAS <br>OFICINAS</h2>
@@ -667,10 +667,12 @@
     <script src="dist/js/vendor/what-input.js"></script>
     <script src="dist/js/vendor/foundation.min.js"></script>
     <script src="dist/js/app.js"></script>
+    <script src="dist/js/vendor/jquery.scrollify.js"></script>
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <script type="text/javascript">
       window.sr=ScrollReveal({reset:true, viewFactor: .9,}),
-                              sr.reveal('.hero-wrapper-title',{duration: 1000,scale:1,distance:'100px',origin:'bottom'},10);
+                              sr.reveal(".hero-wrapper",{delay:100,scale:1,easing:"ease",opacity:0,duration:1000}),
+                              sr.reveal('.hero-wrapper-title',{delay:100,duration: 1000,scale:1,distance:'100px',origin:'bottom'},10);
                               sr.reveal(".culture-wrapper",{delay:100,scale:1,easing:"ease",opacity:0,duration:1000}),
                               sr.reveal(".culture-wrapper-container-title",{delay:300,distance:'100px',scale: 1,easing:"ease",duration:800}),
                               sr.reveal(".culture-wrapper-container-subtitle",{delay:400,distance:'100px',scale:1,easing:"ease",duration:800}),
