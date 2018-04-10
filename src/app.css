@@ -92,7 +92,7 @@ body {
 
 
   &-title {
-    font-family: var(--roboto);
+    font-family: var(--barlow);
     font-size: 90px;
   }
 
@@ -184,16 +184,19 @@ body {
   align-items: center;
 
   &-container-title {
-    font-family: var(--roboto);
+    font-family: var(--barlow);
     font-size: 45px;
     text-align: left;
     position: relative;
     color: #fff;
     z-index: 2;
+    text-transform: uppercase;
+    line-height: 1em;
   }
 
   &-container-subtitle {
-    font-family: var(--roboto);
+    font-family: var(--barlow);
+    font-weight: 500;
     font-weight: bold;
     font-size: 30px;
     text-align: left;
@@ -201,12 +204,13 @@ body {
     padding-top: 1em;
     color: #fff;
     z-index: 2;
+    line-height: 1em;
   }
 
   &-container-desc {
     font-family: var(--lato);
     font-size: 25px;
-    text-align: left;
+    text-align: left justify;
     position: relative;
     padding-top: 1em;
     color: #fff;
@@ -240,7 +244,7 @@ body {
 }
 
 .content {
-  padding: 1em 5em 1em 15em;
+  padding: 1em 8em 1em 20em;
 }
 
 /* ============================== Cases =======================================*/
@@ -288,11 +292,15 @@ body {
   visibility: hidden;
   transition: 1s ease;
 
-  /* & iframe {
-    margin: 1em;
-    width: 100%;
-    height: 100%;
-  } */
+  & iframe {
+    /* margin: 1em; */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  }
 
   &.active {
     opacity: 1;
@@ -323,7 +331,9 @@ body {
   position: absolute;
   bottom: 50%;
   right: 0;
+  left: 95%;
   transform: rotate(90deg);
+  z-index: 9999999999999;
 }
 
 .modal-one, .modal-two, .modal-three, .modal-four, .modal-five, .modal-six {
@@ -360,10 +370,12 @@ body {
 
     & h3 {
       text-align: justify;
-      font-family: var(--roboto);
+      font-family: var(--barlow);
       font-size: 45px;
       color: white;
       line-height: 1em;
+      text-transform: uppercase;
+      /* font-weight: bold; */
     }
   }
 
@@ -402,7 +414,7 @@ body {
   width: 80px;
   height:80px;
   cursor: pointer;
-  z-index: 9999999999;
+  z-index: 999999;
 
   & p {
     color: white;
@@ -426,7 +438,7 @@ body {
 
   &-title {
     color: white;
-    font-family: var(--roboto);
+    font-family: var(--barlow);
   }
 
   &-desc {
@@ -523,19 +535,22 @@ body {
     /* align-items: center; */
     flex-direction: column;
     height: 100vh;
+    /* padding-left: 3em; */
   }
 
   & h2 {
     color: white;
     text-align: left;
-    font-family: var(--roboto);
+    font-family: var(--barlow);
     font-size: 45px;
+    text-transform: uppercase;
   }
 
   & h3 {
     color: white;
-    font-family: var(--roboto);
-    font-size: 30px;
+    font-family: var(--barlow);
+    font-weight: bolder;
+    font-size: 34px;
   }
 
   & p {
@@ -612,10 +627,11 @@ body {
     display: flex;
     align-self: flex-start;
     color: white;
-    font-family: var(--roboto);
-    font-size: 45px;
+    font-family: var(--barlow);
+    font-size: 48px;
     text-align: left;
     position: relative;
+    text-transform: uppercase;
     color: #fff;
     z-index: 2;
   }
@@ -734,7 +750,7 @@ body {
     padding: 3em 1em 2em 4em;
 
     & h2 {
-      font-family: var(--roboto);
+      font-family: var(--barlow);
       font-size: 45px;
       line-height: 1em;
     }
@@ -776,7 +792,7 @@ body {
   }
 
   &-content {
-    padding: 1em 0 1em 15em;
+    padding: 1em 1em 1em 20em;
   }
 }
 
@@ -827,7 +843,7 @@ body {
   & h2 {
     display: flex;
     color: white;
-    font-family: var(--roboto);
+    font-family: var(--barlow);
     font-size: 45px;
     text-align: left;
     position: relative;
