@@ -165,8 +165,9 @@
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  transition: 1s ease all;
   cursor: pointer;
+  transition: background-size 1s ease;
+  background-size: 100%;
 
   &:hover {
     filter: grayscale(0);
@@ -185,9 +186,9 @@
   }
 
   &:hover {
-    transition: .8s ease all;
+    /* background-size: 120%; */
+    /* transform: scale(1.1); */
     background-size: 120%;
-    /* background-position: left; */
   }
 }
 
