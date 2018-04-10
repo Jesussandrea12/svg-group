@@ -7,6 +7,7 @@
   z-index: 999999999999;
   position: fixed;
   background-color: var(--azul);
+  transition: 1s ease all;
 }
 
 .spinner {

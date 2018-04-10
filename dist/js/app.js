@@ -1,18 +1,20 @@
 $(document).foundation()
 
 $(window).on('load', function(){
-	$('.spinner-container').css("display","none");
-	$('#spinner').css("display","none");
+	$('.spinner-container').css("opacity","0");
+	$('.spinner-container').css("visibility","hidden");
+	$('#spinner').css("opacity","0");
+	$('#spinner').css("visibility","hidden");
 	$('.icon-button').css("display","block");
 });
 
 $(function() {
 	$.scrollify({
     section : ".scroll",
-		interstitialSection : "",
+		interstitialSection : ".nav",
     easing: "easeOutExpo",
     scrollSpeed: 1100,
-    offset : -10,
+    offset : -6.5,
     scrollbars: true,
     standardScrollElements: "",
     setHeights: true,
@@ -202,4 +204,50 @@ $('.planificacion-4-exit').click(function() {
 $('.planificacion-5-exit').click(function() {
 	$('.planificacion-5').removeClass('active')
 	$('.planificacion-5').css('animation', 'modalOut 3s forwards');
+})
+
+// capacidades icons
+$('#next-icon-1').click(function() {
+	$('.planificacion-2').addClass('active')
+	$('.planificacion-1').removeClass('active')
+})
+$('#back-icon-1').click(function() {
+	$('.planificacion-5').addClass('active')
+	$('.planificacion-1').removeClass('active')
+})
+// 2
+$('#next-icon-2').click(function() {
+	$('.planificacion-3').addClass('active')
+	$('.planificacion-2').removeClass('active')
+})
+$('#back-icon-2').click(function() {
+	$('.planificacion-1').addClass('active')
+	$('.planificacion-2').removeClass('active')
+})
+// 3
+$('#next-icon-3').click(function() {
+	$('.planificacion-4').addClass('active')
+	$('.planificacion-3').removeClass('active')
+})
+$('#back-icon-3').click(function() {
+	$('.planificacion-2').addClass('active')
+	$('.planificacion-3').removeClass('active')
+})
+// 4
+$('#next-icon-4').click(function() {
+	$('.planificacion-5').addClass('active')
+	$('.planificacion-4').removeClass('active')
+})
+$('#back-icon-4').click(function() {
+	$('.planificacion-3').addClass('active')
+	$('.planificacion-4').removeClass('active')
+})
+// 5
+$('#next-icon-5').click(function() {
+	$('.planificacion-1').addClass('active')
+	$('.planificacion-5').removeClass('active')
+})
+$('#back-icon-5').click(function() {
+	$('.planificacion-4').addClass('active')
+	$('.planificacion-5').removeClass('active')
 })

@@ -123,32 +123,24 @@
     <!-- hero -->
     <div class="hero-wrapper scroll" id="hero" data-magellan-target="hero">
       <div class="hero-wrapper-container">
-        <div class="orbit hero-wrapper-container-slider" role="region" aria-label="pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
+        <div class="orbit hero-wrapper-container-slider" role="region" aria-label="pictures" data-orbit data-orbit data-use-m-u-i="false">
           <div class="orbit-wrapper">
             <ul class="orbit-container">
               <li class="orbit-slide">
-                <div class="hero-box-1">
-                  <h3 class="hero-wrapper-title">MARCAS Y DEPORTES</h3>
-                  <p class="hero-wrapper-subtitle">ADVERTISING & SPORTS MKTING</p>
-                </div>
+                <h3 class="hero-wrapper-title">MARCAS Y DEPORTES</h3>
+                <p class="hero-wrapper-subtitle">ADVERTISING & SPORTS MKTING</p>
               </li>
               <li class="orbit-slide">
-                <div class="hero-box-2">
-                  <h3 class="hero-wrapper-title">MEDIOS + EGAGEMENT</h3>
-                  <p class="hero-wrapper-subtitle">ADVERTISING & SPORTS MKTING</p>
-                </div>
+                <h3 class="hero-wrapper-title">MEDIOS + EGAGEMENT</h3>
+                <p class="hero-wrapper-subtitle">ADVERTISING & SPORTS MKTING</p>
               </li>
               <li class="orbit-slide">
-                <div class="hero-box-3">
-                  <h3 class="hero-wrapper-title">CONFIANZA Y PASIÓN</h3>
-                  <p class="hero-wrapper-subtitle">ADVERTISING & SPORTS MKTING</p>
-                </div>
+                <h3 class="hero-wrapper-title">CONFIANZA Y PASIÓN</h3>
+                <p class="hero-wrapper-subtitle">ADVERTISING & SPORTS MKTING</p>
               </li>
               <li class="orbit-slide">
-                <div class="hero-box-4">
-                  <h3 class="hero-wrapper-title">24 7 360º</h3>
-                  <p class="hero-wrapper-subtitle">ADVERTISING & SPORTS MKTING</p>
-                </div>
+                <h3 class="hero-wrapper-title">24 7 360º</h3>
+                <p class="hero-wrapper-subtitle">ADVERTISING & SPORTS MKTING</p>
               </li>
             </ul>
           </div>
@@ -354,10 +346,38 @@
           <!-- lightbox -->
           <div class="overlay-lightbox-1">
             <span class="icon-cross lightbox-exit-1"></span>
-            <img src="dist/images/menu-ejemplo.jpg" alt="ejemplo">
-            <img src="dist/images/menu-ejemplo.jpg" alt="ejemplo">
-            <img src="dist/images/menu-ejemplo.jpg" alt="ejemplo">
-            <iframe src="https://www.youtube.com/embed/TtQElkzM5NY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
+              <div class="orbit-wrapper">
+                <ul class="orbit-container">
+                  <li class="is-active orbit-slide">
+                    <figure class="orbit-figure">
+                      <img class="orbit-image" src="dist/images/menu-ejemplo.jpg" alt="Space">
+                    </figure>
+                  </li>
+                  <li class="orbit-slide">
+                    <figure class="orbit-figure">
+                      <img class="orbit-image" src="dist/images/menu-ejemplo.jpg" alt="Space">
+                    </figure>
+                  </li>
+                  <li class="orbit-slide">
+                    <figure class="orbit-figure">
+                      <img class="orbit-image" src="dist/images/menu-ejemplo.jpg" alt="Space">
+                    </figure>
+                  </li>
+                  <li class="orbit-slide">
+                    <figure class="orbit-figure">
+                      <img class="orbit-image" src="dist/images/menu-ejemplo.jpg" alt="Space">
+                    </figure>
+                  </li>
+                </ul>
+              </div>
+              <nav class="orbit-bullets slide-bullets">
+                <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+                <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+                <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+                <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+              </nav>
+            </div>
           </div>
           <div class="overlay-lightbox-2">
             <span class="icon-cross lightbox-exit-2"></span>
@@ -483,6 +503,21 @@
     </section>
 
     <!-- planificacion -->
+
+    <!-- <section class="module module_main scroll" style="height: 683px;">
+      <div class="module-inner1" style="opacity: 1;">
+        <div class="module-inner2">
+          <h1 class="module-title module-title-country appear appear-on">Spain today</h1>
+          <div class="module-intro appear appear-on">
+            <p>Fall in love with Spain, where food, friends, family and fun rule all. Whether you're looking to follow royal footsteps in Madrid, lose yourself in Barcelona's sea breeze, or tame the brave bull in mythical Andalucía, adventure awaits around every corner.</p>
+          </div>
+        </div>
+      </div>
+      <div class="module-background" style="transform: translateY(0px);">
+        <div class="module-background-image"><img src="dist/images/bg-planificacion.jpg" alt="Spain today" width="1280" height="800"></div>
+      </div>
+    </section> -->
+
     <section class="planificacion-1">
       <div class="planificacion-1-content">
         <div class="grid-x">
@@ -491,6 +526,8 @@
           <div class="cell small-12 medium-12 large-12">
             <div class="grid-x bg-content">
               <span class="icon-cross planificacion-1-exit"></span>
+              <img src="dist/images/promociones.png" id="next-icon-1" class="next-icon" alt="next">
+              <img src="dist/images/planificacion.png" id="back-icon-1" class="back-icon" alt="back">
               <div class="cell small-12 medium-12 large-8 planificacion-1-text">
                 <h2>Planificación <br>de medios</h2>
                 <p>La planificación e implementación de campañas
@@ -522,6 +559,8 @@
           <div class="cell small-12 medium-12 large-12">
             <div class="grid-x bg-content">
               <span class="icon-cross planificacion-2-exit"></span>
+              <img src="dist/images/consultoria.png" id="back-icon-2" class="back-icon" alt="back">
+              <img src="dist/images/eventos.png" id="next-icon-2" class="next-icon" alt="next">
               <div class="cell small-12 medium-12 large-8 planificacion-2-text">
                 <h2>Planificación <br>de medios</h2>
                 <p>La planificación e implementación de campañas
@@ -553,6 +592,8 @@
           <div class="cell small-12 medium-12 large-12">
             <div class="grid-x bg-content">
               <span class="icon-cross planificacion-3-exit"></span>
+              <img src="dist/images/promociones.png" id="back-icon-3" class="back-icon" alt="back">
+              <img src="dist/images/hospitality.png" id="next-icon-3" class="next-icon" alt="next">
               <div class="cell small-12 medium-12 large-8 planificacion-3-text">
                 <h2>Planificación <br>de medios</h2>
                 <p>La planificación e implementación de campañas
@@ -584,6 +625,8 @@
           <div class="cell small-12 medium-12 large-12">
             <div class="grid-x bg-content">
               <span class="icon-cross planificacion-4-exit"></span>
+              <img src="dist/images/eventos.png" id="back-icon-4" class="back-icon" alt="next">
+              <img src="dist/images/planificacion.png" id="next-icon-4" class="next-icon" alt="back">
               <div class="cell small-12 medium-12 large-8 planificacion-4-text">
                 <h2>Planificación <br>de medios</h2>
                 <p>La planificación e implementación de campañas
@@ -615,6 +658,8 @@
           <div class="cell small-12 medium-12 large-12">
             <div class="grid-x bg-content">
               <span class="icon-cross planificacion-5-exit"></span>
+              <img src="dist/images/hospitality.png" id="back-icon-5" class="back-icon" alt="back">
+              <img src="dist/images/consultoria.png" id="next-icon-5" class="next-icon" alt="next">
               <div class="cell small-12 medium-12 large-8 planificacion-5-text">
                 <h2>Planificación <br>de medios</h2>
                 <p>La planificación e implementación de campañas
@@ -672,7 +717,7 @@
     <script type="text/javascript">
       window.sr=ScrollReveal({reset:true, viewFactor: .9,}),
                               sr.reveal(".hero-wrapper",{delay:100,scale:1,easing:"ease",opacity:0,duration:1000}),
-                              sr.reveal('.hero-wrapper-title',{delay:100,duration: 1000,scale:1,distance:'100px',origin:'bottom'},10);
+                              sr.reveal('.hero-wrapper-title',{delay:100,duration: 1600,scale:1,distance:'100px',origin:'bottom'},5000);
                               sr.reveal(".culture-wrapper",{delay:100,scale:1,easing:"ease",opacity:0,duration:1000}),
                               sr.reveal(".culture-wrapper-container-title",{delay:300,distance:'100px',scale: 1,easing:"ease",duration:800}),
                               sr.reveal(".culture-wrapper-container-subtitle",{delay:400,distance:'100px',scale:1,easing:"ease",duration:800}),
