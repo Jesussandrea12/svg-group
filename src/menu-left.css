@@ -185,8 +185,8 @@
   }
 
   &:hover {
-    transition: 1s ease all;
-    background-size: 150%;
+    transition: .8s ease all;
+    background-size: 120%;
     /* background-position: left; */
   }
 }
