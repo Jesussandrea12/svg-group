@@ -1,41 +1,14 @@
 /* General */
 html {
   /* overflow-y:hidden; */
-  scroll-snap-type: mandatory;
-
-  /* older spec implementation */
-  scroll-snap-destination: 100% 0%;
-  scroll-snap-points-y: repeat(100%);
 }
 body {
   background-color: var(--azul);
-  scroll-snap-align: start;
-  overflow-x: hidden;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  scroll-snap-points-y: repeat(100%);
-  scroll-snap-type: mandatory;
-  scroll-snap-destination: 100% 0%;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 7px;
-}
-
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  background-color: transparent;
-  cursor: pointer;
-}
-
-::-webkit-scrollbar-thumb {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-  background-color: rgba(0,0,0,.4);
-  cursor: pointer;
-}
+} */
 
 /* =============================== Top bar ====================================*/
 
