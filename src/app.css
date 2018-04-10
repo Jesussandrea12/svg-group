@@ -396,12 +396,13 @@ body {
   display: flex;
   padding: 1em;
   margin: 1em;
-  /* position: absolute; */
-  bottom: 0;
-  right: 0;
+  position: absolute;
+  bottom: 5px;
+  right: 35px;
   width: 80px;
   height:80px;
   cursor: pointer;
+  z-index: 9999999999;
 
   & p {
     color: white;
