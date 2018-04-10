@@ -166,7 +166,7 @@
   justify-content: flex-end;
   flex-direction: column;
   cursor: pointer;
-  transition: background-size 1s ease;
+  transition: background-size .4s ease;
   background-size: 100%;
 
   &:hover {
