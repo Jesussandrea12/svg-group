@@ -1,4 +1,8 @@
-$(document).foundation()
+const $body = $('body');
+
+$(document).ready(function(){
+	$(document).foundation();
+});
 
 $(window).on('load', function(){
 	$('.spinner-container').css("opacity","0");
@@ -6,15 +10,15 @@ $(window).on('load', function(){
 	$('#spinner').css("opacity","0");
 	$('#spinner').css("visibility","hidden");
 	$('.icon-button').css("display","block");
+	$body.css("overflow","visible");
 });
 
 $(function() {
 	$.scrollify({
     section : ".scroll",
-		interstitialSection : ".nav",
     easing: "easeOutExpo",
     scrollSpeed: 1100,
-    offset : -6.5,
+    offset : -7,
     scrollbars: true,
     standardScrollElements: "",
     setHeights: true,
@@ -27,6 +31,17 @@ $(function() {
     afterRender:function() {}
   });
 });
+
+function lock() {
+	var current = $(window).scrollTop();
+	$(window).scroll(function() {
+		$(window).scrollTop(current);
+	});
+}
+
+function unlock() {
+	$(window).off('scroll');
+}
 
 $('.hamburger').click(function(){
 	$(this).toggleClass('is-active');
@@ -42,168 +57,484 @@ $('#burguer-button').click(function(){
 });
 
 // Menu Left
-$('#box-news-1').click(function(){
-	$('.box-news-1-open').fadeIn('3000','swing');
+$('.box-news-1-open').click(function(){
+	$('#button-menu-left').addClass('hidden');
+	$('#button-back-menu').addClass('active');
+	$('.box-news-1-open').addClass('active');
+	$('.box-news-2-open').addClass('down');
+	$('.box-news-3-open').addClass('down');
 });
-$('.box-news-back').click(function(){
-	$('.box-news-1-open').fadeOut('3000','swing');
+$('#button-back-menu').click(function(){
+	$('#button-menu-left').removeClass('hidden');
+	$('#button-back-menu').removeClass('active');
+	$('[data-show="true"]').removeClass('active');
+	$('[data-show="true"]').removeClass('down');
 });
 
 // 2
-$('#box-news-2').click(function(){
-	$('.box-news-2-open').fadeIn('3000','swing');
-});
-$('.box-news-back').click(function(){
-	$('.box-news-2-open').fadeOut('3000','swing');
+$('.box-news-2-open').click(function(){
+	$('#button-menu-left').addClass('hidden');
+	$('#button-back-menu').addClass('active');
+	$('.box-news-1-open').addClass('down');
+	$('.box-news-2-open').addClass('active');
+	$('.box-news-3-open').addClass('down');
 });
 
 // 3
-$('#box-news-3').click(function(){
-	$('.box-news-3-open').fadeIn('3000','swing');
-});
-
-$('.box-news-back').click(function(){
-	$('.box-news-3-open').fadeOut('3000','swing');
+$('.box-news-3-open').click(function(){
+	$('#button-menu-left').addClass('hidden');
+	$('#button-back-menu').addClass('active');
+	$('.box-news-1-open').addClass('down');
+	$('.box-news-2-open').addClass('down');
+	$('.box-news-3-open').addClass('active');
 });
 
 // Overlay
 $('.box-case-one').click(function(){
 	$('.overlay-one').addClass('active');
-	$('.overlay-one').css('animation', 'modalIn 3s forwards');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
 });
 $('.box-case-two').click(function(){
 	$('.overlay-two').addClass('active');
-	$('.overlay-two').css('animation', 'modalIn 3s forwards');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
 });
 $('.box-case-three').click(function(){
 	$('.overlay-three').addClass('active');
-	$('.overlay-three').css('animation', 'modalIn 3s forwards');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
 });
 $('.box-case-four').click(function(){
 	$('.overlay-four').addClass('active');
-	$('.overlay-four').css('animation', 'modalIn 3s forwards');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
 });
 $('.box-case-five').click(function(){
 	$('.overlay-five').addClass('active');
-	$('.overlay-five').css('animation', 'modalIn 3s forwards');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
 });
 $('.box-case-six').click(function(){
 	$('.overlay-six').addClass('active');
-	$('.overlay-six').css('animation', 'modalIn 3s forwards');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
+});
+$('.box-case-seven').click(function(){
+	$('.overlay-seven').addClass('active');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
+});
+$('.box-case-eight').click(function(){
+	$('.overlay-eight').addClass('active');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
+});
+$('.box-case-nine').click(function(){
+	$('.overlay-nine').addClass('active');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
+});
+$('.box-case-ten').click(function(){
+	$('.overlay-ten').addClass('active');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
+});
+$('.box-case-eleven').click(function(){
+	$('.overlay-eleven').addClass('active');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
+});
+$('.box-case-twelve').click(function(){
+	$('.overlay-twelve').addClass('active');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
 });
 
 // remove class
 $('.modal-exit').click(function(){
 	$('.overlay-one').removeClass('active');
-	$('.overlay-one').css('animation', 'modalOut 3s forwards');
+	$(document).unbind('keydown');
+	$body.css("overflow","visible");
+	unlock()
 });
 $('.modal-exit').click(function(){
 	$('.overlay-two').removeClass('active');
-	$('.overlay-two').css('animation', 'modalOut 3s forwards');
+	$(document).unbind('keydown');
+	$body.css("overflow","visible");
+	unlock()
 });
 $('.modal-exit').click(function(){
 	$('.overlay-three').removeClass('active');
-	$('.overlay-three').css('animation', 'modalOut 3s forwards');
+	$(document).unbind('keydown');
+	$body.css("overflow","visible");
+	unlock()
 });
 $('.modal-exit').click(function(){
 	$('.overlay-four').removeClass('active');
-	$('.overlay-four').css('animation', 'modalOut 3s forwards');
+	$(document).unbind('keydown');
+	$body.css("overflow","visible");
+	unlock()
 });
 $('.modal-exit').click(function(){
 	$('.overlay-five').removeClass('active');
-	$('.overlay-five').css('animation', 'modalOut 3s forwards');
+	$(document).unbind('keydown');
+	$body.css("overflow","visible");
+	unlock()
 });
 $('.modal-exit').click(function(){
 	$('.overlay-six').removeClass('active');
-	$('.overlay-six').css('animation', 'modalOut 3s forwards');
+	$(document).unbind('keydown');
+	$body.css("overflow","visible");
+	unlock()
+});
+$('.modal-exit').click(function(){
+	$('.overlay-seven').removeClass('active');
+	$(document).unbind('keydown');
+	$body.css("overflow","visible");
+	unlock()
+});
+$('.modal-exit').click(function(){
+	$('.overlay-eight').removeClass('active');
+	$(document).unbind('keydown');
+	$body.css("overflow","visible");
+	unlock()
+});
+$('.modal-exit').click(function(){
+	$('.overlay-nine').removeClass('active');
+	$(document).unbind('keydown');
+	$body.css("overflow","visible");
+	unlock()
+});
+$('.modal-exit').click(function(){
+	$('.overlay-ten').removeClass('active');
+	$(document).unbind('keydown');
+	$body.css("overflow","visible");
+	unlock()
+});
+$('.modal-exit').click(function(){
+	$('.overlay-eleven').removeClass('active');
+	$(document).unbind('keydown');
+	$body.css("overflow","visible");
+	unlock()
+});
+$('.modal-exit').click(function(){
+	$('.overlay-twelve').removeClass('active');
+	$(document).unbind('keydown');
+	$body.css("overflow","visible");
+	unlock()
 });
 
 // lightbox
 $('.modal-image-1').click(function(){
 	$('.overlay-lightbox-1').addClass('active');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
 });
+
 $('.lightbox-exit-1').click(function(){
 	$('.overlay-lightbox-1').removeClass('active');
 });
 $('.modal-image-2').click(function(){
 	$('.overlay-lightbox-2').addClass('active');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
 });
 $('.lightbox-exit-2').click(function(){
 	$('.overlay-lightbox-2').removeClass('active');
 });
 $('.modal-image-3').click(function(){
 	$('.overlay-lightbox-3').addClass('active');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
 });
 $('.lightbox-exit-3').click(function(){
 	$('.overlay-lightbox-3').removeClass('active');
 });
 $('.modal-image-4').click(function(){
 	$('.overlay-lightbox-4').addClass('active');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
 });
 $('.lightbox-exit-4').click(function(){
 	$('.overlay-lightbox-4').removeClass('active');
 });
 $('.modal-image-5').click(function(){
 	$('.overlay-lightbox-5').addClass('active');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
 });
 $('.lightbox-exit-5').click(function(){
 	$('.overlay-lightbox-5').removeClass('active');
 });
 $('.modal-image-6').click(function(){
 	$('.overlay-lightbox-6').addClass('active');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
 });
 $('.lightbox-exit-6').click(function(){
 	$('.overlay-lightbox-6').removeClass('active');
+});
+$('.modal-image-7').click(function(){
+	$('.overlay-lightbox-7').addClass('active');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
+});
+$('.lightbox-exit-7').click(function(){
+	$('.overlay-lightbox-7').removeClass('active');
+});
+$('.modal-image-8').click(function(){
+	$('.overlay-lightbox-8').addClass('active');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
+});
+$('.lightbox-exit-8').click(function(){
+	$('.overlay-lightbox-8').removeClass('active');
+});
+$('.modal-image-9').click(function(){
+	$('.overlay-lightbox-9').addClass('active');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
+});
+$('.lightbox-exit-9').click(function(){
+	$('.overlay-lightbox-9').removeClass('active');
+});
+$('.modal-image-10').click(function(){
+	$('.overlay-lightbox-10').addClass('active');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
+});
+$('.lightbox-exit-10').click(function(){
+	$('.overlay-lightbox-10').removeClass('active');
+});
+$('.modal-image-11').click(function(){
+	$('.overlay-lightbox-11').addClass('active');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
+});
+$('.lightbox-exit-11').click(function(){
+	$('.overlay-lightbox-11').removeClass('active');
+});
+$('.modal-image-12').click(function(){
+	$('.overlay-lightbox-12').addClass('active');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
+});
+$('.lightbox-exit-12').click(function(){
+	$('.overlay-lightbox-12').removeClass('active');
 });
 
 // grid-Extra
 $('.more-grid').click(function() {
 	$('.grid-extra').addClass('active')
 })
-$('.grid-extra-exit').click(function() {
+$('.less-grid').click(function() {
 	$('.grid-extra').removeClass('active')
 })
 
 // Capacidades modal
 $('.consultoria').click(function() {
+	$('.blue-overlay').addClass('active')
+	$('.blue-overlay').css('animation', 'modalIn 1.5s forwards');
+	$('.planificacion-1').css('transition-delay', '1.5s');
 	$('.planificacion-1').addClass('active')
-	$('.planificacion-1').css('animation', 'modalIn 3s forwards');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
 })
 $('.promociones').click(function() {
+	$('.blue-overlay').addClass('active')
+	$('.blue-overlay').css('animation', 'modalIn 1.5s forwards');
+	$('.planificacion-2').css('transition-delay', '1.5s');
 	$('.planificacion-2').addClass('active')
-	$('.planificacion-2').css('animation', 'modalIn 3s forwards');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
 })
 $('.eventos').click(function() {
+	$('.blue-overlay').addClass('active')
+	$('.blue-overlay').css('animation', 'modalIn 1.5s forwards');
+	$('.planificacion-3').css('transition-delay', '1.5s');
 	$('.planificacion-3').addClass('active')
-	$('.planificacion-3').css('animation', 'modalIn 3s forwards');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
 })
 $('.hospitality').click(function() {
+	$('.blue-overlay').addClass('active')
+	$('.blue-overlay').css('animation', 'modalIn 1.5s forwards');
+	$('.planificacion-4').css('transition-delay', '1.5s');
 	$('.planificacion-4').addClass('active')
-	$('.planificacion-4').css('animation', 'modalIn 3s forwards');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
 })
 $('.planification').click(function() {
+	$('.blue-overlay').addClass('active')
+	$('.blue-overlay').css('animation', 'modalIn 1.5s forwards');
+	$('.planificacion-5').css('transition-delay', '1.5s');
 	$('.planificacion-5').addClass('active')
-	$('.planificacion-5').css('animation', 'modalIn 3s forwards');
+	$(document).on('keydown', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+	});
+	$body.css("overflow","hidden");
+	lock()
 })
+
+// remove
 $('.planificacion-1-exit').click(function() {
+	$('.blue-overlay').removeClass('active')
+	$('.blue-overlay').css('animation', 'modalOut 1s forwards');
+	$('.planificacion-1').css('transition-delay', '.1s');
 	$('.planificacion-1').removeClass('active')
-	$('.planificacion-1').css('animation', 'modalOut 3s forwards');
+	$(document).unbind('keydown');
+	$body.css("overflow","visible");
+	unlock()
 })
 $('.planificacion-2-exit').click(function() {
+	$('.blue-overlay').removeClass('active')
+	$('.blue-overlay').css('animation', 'modalOut 1s forwards');
+	$('.planificacion-2').css('transition-delay', '.1s');
 	$('.planificacion-2').removeClass('active')
-	$('.planificacion-2').css('animation', 'modalOut 3s forwards');
+	$(document).unbind('keydown');
+	$body.css("overflow","visible");
+	unlock()
 })
 $('.planificacion-3-exit').click(function() {
+	$('.blue-overlay').removeClass('active')
+	$('.blue-overlay').css('animation', 'modalOut 1s forwards');
+	$('.planificacion-3').css('transition-delay', '.1s');
 	$('.planificacion-3').removeClass('active')
-	$('.planificacion-3').css('animation', 'modalOut 3s forwards');
+	$(document).unbind('keydown');
+	$body.css("overflow","visible");
+	unlock()
 })
 $('.planificacion-4-exit').click(function() {
+	$('.blue-overlay').removeClass('active')
+	$('.blue-overlay').css('animation', 'modalOut 1s forwards');
+	$('.planificacion-4').css('transition-delay', '.1s');
 	$('.planificacion-4').removeClass('active')
-	$('.planificacion-4').css('animation', 'modalOut 3s forwards');
+	$(document).unbind('keydown');
+	$body.css("overflow","visible");
+	unlock()
 })
 $('.planificacion-5-exit').click(function() {
+	$('.blue-overlay').removeClass('active')
+	$('.blue-overlay').css('animation', 'modalOut 1s forwards');
+	$('.planificacion-5').css('transition-delay', '.1s');
 	$('.planificacion-5').removeClass('active')
-	$('.planificacion-5').css('animation', 'modalOut 3s forwards');
+	$(document).unbind('keydown');
+	$body.css("overflow","visible");
+	unlock()
 })
 
 // capacidades icons

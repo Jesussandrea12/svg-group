@@ -1,6 +1,6 @@
 
 .menu {
-  font-size: 30px;
+  font-size: 40px;
   transition: .5s ease all;
 }
 
@@ -11,7 +11,7 @@
 
 .menu li:before{
   content: '∘';
-  font-size: 50px;
+  font-size: 0px;
   line-height: 20px;
   color: #888888;
 }
@@ -19,12 +19,13 @@
 .menu a {
   color: #555;
   text-decoration: none;
-  font-family: var(--barlow);
-  text-transform: capitalize;
-  line-height: .8em;
+  font-family: var(--roboto);
+  line-height: .4em;
+  font-weight: 100;
+  letter-spacing: -1.5px;
 
   &:hover {
-    color: #888;
+    color: #0090ff;
   }
 }
 
@@ -66,10 +67,10 @@
   width: 25vw;
   align-items: center;
   transition: .5s;
-}
 
-.menu.active {
-  right: 0;
+  &.active {
+    right: 0;
+  }
 }
 
 .menu ul {

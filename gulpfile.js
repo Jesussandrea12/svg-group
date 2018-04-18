@@ -8,16 +8,8 @@ var lost = require('lost')
 var cssImport = require('postcss-import')
 var csswring = require('csswring')
 var mqpacker = require('css-mqpacker')
+// var autoprefixer = require('autoprefixer')
 var browserSync = require('browser-sync').create()
-
-// Servidor de desarrollo
-gulp.task('serve', function () {
-  browserSync.init({
-    server: {
-      baseDir: ''
-    }
-  })
-})
 
 // Tarea para procesar el CSS
 gulp.task('css', function () {
@@ -27,7 +19,7 @@ gulp.task('css', function () {
     lost(),
     rucksack(),
     cssnested,
-    cssnext({ browsers: ['> 5%', 'ie 8']}),
+    cssnext({ browsers: ['> 1%', 'last 2 versions']}),
     mqpacker(),
     csswring()
   ]
@@ -43,6 +35,17 @@ gulp.task('watch', function () {
   gulp.watch('./src/*.css', ['css'])
   gulp.watch('./dist/js/*.js').on('change', browserSync.reload)
   gulp.watch('./*.html').on('change', browserSync.reload)
+})
+
+
+// Servidor de desarrollo
+gulp.task('serve', function () {
+  browserSync.init({
+    server: {
+      baseDir: './',
+      index : "index.html"
+    }
+  })
 })
 
 gulp.task('default', ['watch', 'serve'])
